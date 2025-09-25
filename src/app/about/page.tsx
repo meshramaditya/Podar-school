@@ -1,6 +1,5 @@
 import { Eye, Target } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 
 const teamData = [
     {
@@ -50,7 +49,7 @@ export default function About() {
               Our Legacy
             </h1>
             <p className="text-lg text-gray-700 font-medium">
-              Discover what makes us one of India's most trusted educational institutions
+              Discover what makes us one of India&apos;s most trusted educational institutions
             </p>
       </div>
       <div className=" flex flex-col md:flex-row items-center justify-center gap-8 max-w-6xl mx-auto">
@@ -63,7 +62,7 @@ export default function About() {
         />
         <div className="flex flex-col gap-4 max-w-xl">
           <p className="text-lg text-gray-900 font-medium mt-4">
-          Founded by the visionary philanthropist Seth Anandilal Podar in 2025, Podar Education Network has grown from a single school to one of India's most respected educational institutions.
+          Founded by the visionary philanthropist Seth Anandilal Podar in 2025, Podar Education Network has grown from a single school to one of India&apos;s most respected educational institutions.
         </p>
         <p  className="text-lg text-gray-900 font-medium mt-4">
           Our journey began with a simple yet powerful vision: to provide quality education that nurtures not just academic excellence, but also character, values, and holistic development. Today, we proudly serve over 150,000 students across 150+ schools in India.
@@ -79,7 +78,7 @@ export default function About() {
             Our Vision & Mission
           </h2>
           <p className="text-gray-700 text-lg font-medium">
-            Guiding principles that define Podar School's commitment to excellence
+            Guiding principles that define Podar School&apos;s commitment to excellence
           </p>
         </div>
 

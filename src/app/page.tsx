@@ -165,7 +165,7 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-purple-700/90 mb-4">Quality Education</h2>
           <p className="text-2xl text-black font-semibold mb-8 max-w-2xl">
             Welcome to Podar School, where tradition meets innovation to nurture
-            young minds and build character for tomorrow's challenges.
+            young minds and build character for tomorrow&apos;s challenges.
           </p>
           <div className="flex gap-4 flex-wrap justify-center">
             <Link href="/contact">
@@ -189,7 +189,7 @@ export default function Home() {
           Why Choose Podar School
         </h1>
         <p className="text-lg text-gray-700 font-medium">
-          Discover what makes us one of India's most trusted educational institutions
+          Discover what makes us one of India&apos;s most trusted educational institutions
         </p>
       </div>
 
