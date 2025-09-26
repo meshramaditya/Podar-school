@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import WhyCard from "@/components/WhyCard"
-import { GraduationCap, Award, BookOpen, Users ,School} from "lucide-react" // or any icon lib you like
+import { GraduationCap, Award, BookOpen, Users ,School, Building2, HeartHandshake} from "lucide-react" // or any icon lib you like
 import GlanceCard from "@/components/GlanceCard"
 export default function Home() {
   // Hero images for slideshow
@@ -231,6 +231,7 @@ export default function Home() {
           <h2 className="text-4xl font-semibold text-purple-700 mb-2">
             Podar School at a Glance
           </h2>
+
           <p className="text-lg text-gray-700 font-medium">
             Our impressive numbers reflect our commitment to educational excellence
           </p>
@@ -245,6 +246,7 @@ export default function Home() {
               <BookOpen className="w-7 h-7 text-purple-700 transition-all duration-300 group-hover:drop-shadow-[0_0_15px_rgba(255,255,0,0.7)]" />
             </div>
             <h3 className="text-2xl font-bold text-gray-800 mb-1">300+</h3>
+            <h3 className="text-black font-bold">Total Students</h3>
             <p className="text-gray-600 text-center ">Bright minds learning together</p>
           </div>
 
@@ -256,6 +258,7 @@ export default function Home() {
               <Users className="w-7 h-7 text-purple-700 transition-all duration-300 group-hover:drop-shadow-[0_0_15px_rgba(255,255,0,0.7)]" />
             </div>
             <h3 className="text-2xl font-bold text-gray-800 mb-1">25+</h3>
+            <h3 className="text-black font-bold">Expert Teachers</h3>
             <p className="text-gray-600 text-center">Dedicated educators</p>
           </div>
 
@@ -267,6 +270,7 @@ export default function Home() {
               <School className="w-7 h-7 text-purple-700 transition-all duration-300 group-hover:drop-shadow-[0_0_15px_rgba(255,255,0,0.7)]" />
             </div>
             <h3 className="text-2xl font-bold text-gray-800 mb-1">20+</h3>
+            <h3 className="text-black font-bold">Smart Classrooms</h3>
             <p className="text-gray-600 text-center">Modern learning spaces</p>
           </div>
 
@@ -278,6 +282,7 @@ export default function Home() {
               <Award className="w-7 h-7 text-purple-700 transition-all duration-300 group-hover:drop-shadow-[0_0_15px_rgba(255,255,0,0.7)]" />
             </div>
             <h3 className="text-2xl font-bold text-gray-800 mb-1">25+</h3>
+            <h3 className="text-black font-bold">Activities</h3>
             <p className="text-gray-600 text-center">Diverse learning experiences</p>
           </div>
         </div>
@@ -296,7 +301,7 @@ export default function Home() {
               {announcements.map((a) => (
                 <div
                   key={a.id}
-                  className="flex ml-10 mr-10  flex-col md:flex-row items-start md:items-center gap-4 p-4 bg-white rounded-lg shadow-sm transition transform hover:scale-105 hover:shadow-lg"
+                  className="flex ml-8 mr-4  flex-col md:flex-row items-start md:items-center gap-4 p-4 bg-white rounded-lg shadow-sm transition transform hover:scale-105 hover:shadow-lg"
                 >
                   {/* Icon */}
                   <div className="w-10 h-10 bg-gray-50 rounded-lg flex items-center justify-center flex-shrink-0 text-xl">
@@ -390,8 +395,8 @@ export default function Home() {
                 />
               </div>
 
-              <h2 className="font-bold mb-2 text-gray-800">{facility.title}</h2>
-              <p className="text-gray-600 text-sm items-start">{facility.desc}</p>
+              <h1 className="font-bold  mb-2 text-gray-800">{facility.title}</h1>
+              <p className="text-gray-600 items-start">{facility.desc}</p>
             </div>
           ))}
         </div>
