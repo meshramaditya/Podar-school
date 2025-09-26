@@ -220,69 +220,113 @@ export default function Home() {
 
       {/* Podar School at a Glance */}
       <section className="bg-[#FAF9F6] py-16">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-semibold text-purple-700 mb-2">
-          Podar School at a Glance
-        </h2>
-        <p className="text-lg text-gray-700 font-medium">
-          Our impressive numbers reflect our commitment to educational excellence
-        </p>
-      </div>
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-semibold text-purple-700 mb-2">
+            Podar School at a Glance
+          </h2>
+          <p className="text-lg text-gray-700 font-medium">
+            Our impressive numbers reflect our commitment to educational excellence
+          </p>
+        </div>
 
-      <div className="flex flex-wrap justify-center gap-12 max-w-6xl mx-auto ">
-        <GlanceCard
-          icon={<BookOpen className="w-7 h-7 " />}
-          number="300+"
-          title="Total Students"
-          description="Bright minds learning together"
-        />
-        <GlanceCard
-          icon={<Users className="w-7 h-7" />}
-          number="25+"
-          title="Expert Teachers"
-          description="Dedicated educators"
-        />
-        <GlanceCard
-          icon={<School className="w-7 h-7" />}
-          number="20+"
-          title="Smart Classrooms"
-          description="Modern learning spaces"
-        />
-        <GlanceCard 
-          icon={<Award  className="w-7 h-7 " />}
-          number="25+"
-          title="Activities"
-          description="Diverse learning experiences"
-        />
-      </div>
-    </section>
+        <div className="flex flex-wrap justify-center gap-12 max-w-6xl mx-auto">
+          {/* Total Students */}
+          <div className="group bg-[#FAF9F6] rounded-lg shadow-lg p-6 w-60 flex flex-col items-center transition transform hover:scale-105 hover:shadow-2xl">
+            <div className="w-16 h-16 flex items-center justify-center rounded-full bg-purple-100 mb-4
+                            transition-all duration-300
+                            group-hover:bg-yellow-100 group-hover:shadow-[0_0_20px_5px_rgba(255,255,0,0.6)]">
+              <BookOpen className="w-7 h-7 text-purple-700 transition-all duration-300 group-hover:drop-shadow-[0_0_15px_rgba(255,255,0,0.7)]" />
+            </div>
+            <h3 className="text-2xl font-bold text-gray-800 mb-1">300+</h3>
+            <p className="text-gray-600 text-center text-sm">Bright minds learning together</p>
+          </div>
+
+          {/* Expert Teachers */}
+          <div className="group bg-[#FAF9F6] rounded-lg shadow-lg p-6 w-60 flex flex-col items-center transition transform hover:scale-105 hover:shadow-2xl">
+            <div className="w-16 h-16 flex items-center justify-center rounded-full bg-purple-100 mb-4
+                            transition-all duration-300
+                            group-hover:bg-yellow-100 group-hover:shadow-[0_0_20px_5px_rgba(255,255,0,0.6)]">
+              <Users className="w-7 h-7 text-purple-700 transition-all duration-300 group-hover:drop-shadow-[0_0_15px_rgba(255,255,0,0.7)]" />
+            </div>
+            <h3 className="text-2xl font-bold text-gray-800 mb-1">25+</h3>
+            <p className="text-gray-600 text-center text-sm">Dedicated educators</p>
+          </div>
+
+          {/* Smart Classrooms */}
+          <div className="group bg-[#FAF9F6] rounded-lg shadow-lg p-6 w-60 flex flex-col items-center transition transform hover:scale-105 hover:shadow-2xl">
+            <div className="w-16 h-16 flex items-center justify-center rounded-full bg-purple-100 mb-4
+                            transition-all duration-300
+                            group-hover:bg-yellow-100 group-hover:shadow-[0_0_20px_5px_rgba(255,255,0,0.6)]">
+              <School className="w-7 h-7 text-purple-700 transition-all duration-300 group-hover:drop-shadow-[0_0_15px_rgba(255,255,0,0.7)]" />
+            </div>
+            <h3 className="text-2xl font-bold text-gray-800 mb-1">20+</h3>
+            <p className="text-gray-600 text-center text-sm">Modern learning spaces</p>
+          </div>
+
+          {/* Activities */}
+          <div className="group bg-[#FAF9F6] rounded-lg shadow-lg p-6 w-60 flex flex-col items-center transition transform hover:scale-105 hover:shadow-2xl">
+            <div className="w-16 h-16 flex items-center justify-center rounded-full bg-purple-100 mb-4
+                            transition-all duration-300
+                            group-hover:bg-yellow-100 group-hover:shadow-[0_0_20px_5px_rgba(255,255,0,0.6)]">
+              <Award className="w-7 h-7 text-purple-700 transition-all duration-300 group-hover:drop-shadow-[0_0_15px_rgba(255,255,0,0.7)]" />
+            </div>
+            <h3 className="text-2xl font-bold text-gray-800 mb-1">25+</h3>
+            <p className="text-gray-600 text-center text-sm">Diverse learning experiences</p>
+          </div>
+        </div>
+      </section>
+
 
       {/* Announcements and Quick Actions */}
        <section className="bg-white py-16 w-full">
       <div className="max-w-6xl mx-auto px-4 flex flex-col lg:flex-row gap-8">
         {/* Latest Announcements */}
-        <div className="flex-1 bg-[#FAF9F6] rounded-xl p-6 shadow-lg">
-          <h2 className="text-2xl font-semibold text-purple-500 mb-6">Latest Announcements</h2>
-          <div className="max-h-96 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 scrollbar-thumb-rounded-md">
-            {announcements.map((a, idx) => (
-              <div key={a.id} className={`flex items-start gap-4 py-4 ${idx !== announcements.length - 1 ? "border-b border-gray-300" : ""}`}>
-                <div className="w-10 h-10 bg-gray-50 rounded-lg flex items-center justify-center flex-shrink-0 text-xl">📢</div>
-                <div className="flex-1">
-                  <h3 className="text-base font-semibold text-gray-900 mb-1">{a.title}</h3>
-                  <p className="text-sm text-gray-600 mb-2">{a.subtitle}</p>
-                  <div className="flex items-center gap-2 text-xs text-gray-400"><CalendarIcon />{a.date}</div>
-                </div>
-                <div className="flex gap-2 flex-shrink-0">
-                  {a.tags.map(tag => (
-                    <span key={tag} className={`px-3 py-1 rounded-full text-xs font-medium ${tag === 'Admissions' ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'}`}>
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
+{/* Latest Announcements */}
+<div className="flex-1 bg-[#FAF9F6] rounded-xl p-6 shadow-lg">
+  <h2 className="text-2xl font-semibold text-purple-500 mb-6">Latest Announcements</h2>
+  
+  <div className="flex flex-col gap-4 max-h-96 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 scrollbar-thumb-rounded-md">
+    {announcements.map((a) => (
+      <div
+        key={a.id}
+        className="flex flex-col md:flex-row items-start md:items-center gap-4 p-4 bg-white rounded-lg shadow-sm transition transform hover:scale-105 hover:shadow-lg"
+      >
+        {/* Icon */}
+        <div className="w-10 h-10 bg-gray-50 rounded-lg flex items-center justify-center flex-shrink-0 text-xl">
+          📢
+        </div>
+
+        {/* Text */}
+        <div className="flex-1">
+          <h3 className="text-base font-semibold text-gray-900 mb-1">{a.title}</h3>
+          <p className="text-sm text-gray-600 mb-2">{a.subtitle}</p>
+          <div className="flex items-center gap-2 text-xs text-gray-400">
+            <CalendarIcon />
+            {a.date}
           </div>
         </div>
+
+        {/* Tags */}
+        <div className="flex gap-2 flex-shrink-0 mt-2 md:mt-0">
+          {a.tags.map((tag) => (
+            <span
+              key={tag}
+              className={`px-3 py-1 rounded-full text-xs font-medium ${
+                tag === "Admissions"
+                  ? "bg-green-100 text-green-800"
+                  : "bg-yellow-100 text-yellow-800"
+              }`}
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+
 
         {/* Quick Actions */}
         <div className="flex-1 bg-[#FAF9F6] rounded-xl p-6 shadow-lg">

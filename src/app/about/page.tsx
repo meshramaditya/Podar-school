@@ -1,4 +1,4 @@
-import { Eye, Target } from "lucide-react";
+import { Eye, Target, Award, Trophy, Star, Medal, ThumbsUp, Crown } from "lucide-react";
 import Image from "next/image";
 
 const teamData = [
@@ -7,17 +7,23 @@ const teamData = [
       role: "Principal, Podar School,(M.Ed, Ph.D. Education, 25+ years experience)",
       image: "/asset/parent_img/img4.jpg",
       description: "At Podar School, we believe that every child is unique and has the potential to excel. Our role is to nurture this potential through personalized attention, innovative teaching methods, and a caring environment. We are committed to developing not just academic achievers, but confident, compassionate, and responsible citizens of tomorrow.",
-    },
-    
-    
+    }, 
   ]
 
+const achievements = [
+    { id: 1, icon: <Award className="w-8 h-8" />, text: "98% Board Exam Success Rate" },
+    { id: 2, icon: <Trophy className="w-8 h-8" />, text: "National Education Excellence Award" },
+    { id: 3, icon: <Star className="w-8 h-8" />, text: "150+ Schools across India" },
+    { id: 4, icon: <Medal className="w-8 h-8" />, text: "Winner - Best Private School Chain" },
+    { id: 5, icon: <ThumbsUp className="w-8 h-8" />, text: "500,000+ Alumni worldwide" },
+    { id: 6, icon: <Crown className="w-8 h-8" />, text: "ISO 9001:2015 Certified" },
+  ];
  
 export default function About() {
   return (
     <main className="w-full h-full bg-white ">
       <div className="w-full ">
-         {/* about hero Section */}
+{/* about hero Section */}
         <section className="relative w-full h-[600px] flex items-center justify-center overflow-hidden">
           <Image
             src="/asset/Image/hero-bg1.jpg"
@@ -42,7 +48,7 @@ export default function About() {
             </div>
         </section>
 
-        {/* Heading */}
+{/* Heading */}
         <section className="bg-white py-16 px-4"> 
           <div className="text-center mb-12 max-w-3xl mx-auto">
             <h1 className="text-5xl font-semibold text-purple-700 mb-2">
@@ -71,7 +77,7 @@ export default function About() {
       </div>
         </section>
 
-        {/* Vision & Mission Section */}
+{/* Vision & Mission Section */}
        <section className="bg-[#FAF9F6] py-16 px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-semibold text-purple-700 mb-2">
@@ -125,7 +131,7 @@ export default function About() {
         </div>
       </section>
 
-        {/* Timeline Section */}
+{/* Timeline Section */}
          <section className="max-w-4xl mx-auto py-12 px-4">
           <h2 className="text-4xl mb-6 text-center font-semibold text-purple-700">
             Our Journey Through Time
@@ -235,46 +241,85 @@ export default function About() {
         </section>
 
 {/*From the Principal’s Desk*/}
-<section className="bg-white py-16 px-4">
-      {/* Section Title */}
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-semibold text-purple-700 mb-2">
-          From the Principal’s Desk
-        </h2>
-      </div>
+      <section className="bg-[#FAF9F6] py-10 px-4">
+        {/* Section Title */}
+        <div className="text-center mb-8">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-purple-700 mb-2">
+            From the Principal’s Desk
+          </h2>
+        </div>
 
-      {/* Team Cards */}
-      <div className="flex flex-col items-center gap-8">
-        {teamData.map((person, idx) => (
+        {/* Team Cards */}
+        <div className="flex flex-col items-center gap-6">
+          {teamData.map((person, idx) => (
+            <div
+              key={idx}
+              className="bg-white flex flex-col sm:flex-row items-center sm:items-start rounded-lg shadow-lg w-full max-w-md sm:max-w-lg md:max-w-2xl p-4 sm:p-6 transition hover:shadow-2xl"
+            >
+              {/* Image */}
+              <div className="flex-shrink-0 mb-4 sm:mb-0">
+                <Image
+                  src={person.image}
+                  alt={person.name}
+                  width={160}
+                  height={200}
+                  className="object-cover h-[200px] w-[160px] sm:h-[240px] sm:w-[200px] md:h-[280px] md:w-[240px] rounded-md shadow"
+                />
+              </div>
+
+              {/* Text */}
+              <div className="flex flex-col sm:ml-4 md:ml-6 text-center sm:text-left">
+                
+                <h3 className="text-lg sm:text-xs md:text-sm font-bold text-gray-800">
+                  {person.description}
+                </h3>
+                <p className="text-sm sm:text-base text-purple-600 font-semibold mt-4 sm:mb-2">
+                  {person.name}
+                </p>
+                <p className="text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed">
+                  {person.role}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+{/* Achievements Section */}
+       <section className="bg-white py-16 px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-semibold text-purple-700 mb-2">
+            Our Achievements
+          </h2>
+          <p className="text-gray-700 text-lg font-medium">
+            Recognition and milestones that reflect our commitment to educational excellence
+          </p>
+        </div>
+
+       {/* Achievement Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        {achievements.map((achieve) => (
           <div
-            key={idx}
-            className="bg-[#FAF9F6] flex items-start rounded-lg shadow-lg w-[70%] p-6 transition hover:shadow-2xl"
+            key={achieve.id}
+            className="group bg-white rounded-lg shadow-lg p-6 flex flex-col items-center justify-center text-center
+                       transition transform hover:scale-105 hover:shadow-2xl"
           >
-            {/* Image */}
-            <div className="flex-shrink-0">
-              <Image
-                src={person.image}
-                alt={person.name}
-                width={240}
-                height={280}
-                className="object-cover h-[280px] w-[240px] rounded-md shadow"
-              />
+            {/* Icon with glow */}
+            <div
+              className="w-16 h-16 flex items-center justify-center rounded-full bg-purple-100 text-purple-700 mb-4
+                         transition-all duration-300
+                         group-hover:bg-yellow-100
+                         group-hover:shadow-[0_0_20px_5px_rgba(255,255,0,0.6)]"
+            >
+              {achieve.icon}
             </div>
 
             {/* Text */}
-            <div className="flex flex-col ml-6">
-              <h3 className="text-2xl font-bold text-gray-800">{person.name}</h3>
-              <p className="text-base text-purple-600 font-semibold mb-3">
-                {person.role}
-              </p>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {person.description}
-              </p>
-            </div>
+            <p className="text-gray-700 text-sm font-medium">{achieve.text}</p>
           </div>
         ))}
       </div>
-    </section>
+      </section>
 
       </div>
     </main>

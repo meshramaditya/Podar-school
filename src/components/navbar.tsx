@@ -64,7 +64,7 @@ export default function Navbar() {
             className="focus:outline-none"
           >
             <svg
-              className="w-6 h-6"
+              className="w-6 h-6 text-black"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -92,7 +92,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Links */}
       {menuOpen && (
-        <div className="md:hidden bg-[#843d8d] mt-2 p-4 flex flex-col gap-4">
+        <div className="md:hidden bg-white mt-2 p-4 flex flex-col gap-4">
           {navItems.map((item) => {
             const isActive = pathname === item.path
             return (
@@ -101,8 +101,8 @@ export default function Navbar() {
                 href={item.path}
                 className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                   isActive
-                    ? "bg-gray-400 text-white shadow-md"
-                    : "text-gray-200 hover:bg-gray-500 hover:text-white"
+                    ? "bg-[#a86db0] text-white shadow-md"
+                    : "text-gray-600 hover:bg-gray-200 hover:text-[#a86db0]"
                 }`}
                 onClick={() => setMenuOpen(false)}
               >
