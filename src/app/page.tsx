@@ -156,31 +156,38 @@ export default function Home() {
           priority
         />
 
-        {/* Overlay Text */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
-                flex flex-col items-center justify-center text-center px-4 
-                bg-gray-400/80 h-[80%] w-[70%] rounded-lg">
-          <h1 className="text-5xl font-bold text-purple-700 00 mb-4">
-            Shaping Future Leaders Through
-          </h1>
-          <h2 className="text-4xl font-bold text-purple-700/90 mb-4">Quality Education</h2>
-          <p className="text-2xl text-black font-semibold mb-8 max-w-2xl">
-            Welcome to Podar School, where tradition meets innovation to nurture
-            young minds and build character for tomorrow&apos;s challenges.
-          </p>
-          <div className="flex gap-4 flex-wrap justify-center">
-            <Link href="/contact">
-            <button className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">
-              Apply For Admission
-            </button>
-          </Link>
-          <Link href="/gallery">
-            <button className="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500 transition">
-              Virtual Tour
-            </button>
-          </Link>
-          </div>
-        </div>
+       {/* Overlay Text */}
+<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+      flex flex-col items-center justify-center text-center px-4
+      bg-gray-400/80 rounded-lg w-11/12 sm:w-4/5 lg:w-3/5 h-auto py-8">
+  
+  <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-purple-700 mb-4">
+    Shaping Future Leaders Through
+  </h1>
+  
+  <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-purple-700/90 mb-4">
+    Quality Education
+  </h2>
+  
+  <p className="text-base sm:text-lg md:text-2xl text-black font-semibold mb-8 max-w-2xl">
+    Welcome to Podar School, where tradition meets innovation to nurture
+    young minds and build character for tomorrow&apos;s challenges.
+  </p>
+  
+  <div className="flex gap-4 flex-wrap justify-center">
+    <Link href="/contact">
+      <button className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">
+        Apply For Admission
+      </button>
+    </Link>
+    <Link href="/gallery">
+      <button className="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500 transition">
+        Virtual Tour
+      </button>
+    </Link>
+  </div>
+</div>
+
       </section>
 
       {/* Why Choose Podar Section */}
@@ -281,50 +288,50 @@ export default function Home() {
        <section className="bg-white py-16 w-full">
       <div className="max-w-6xl mx-auto px-4 flex flex-col lg:flex-row gap-8">
         {/* Latest Announcements */}
-{/* Latest Announcements */}
-<div className="flex-1 bg-[#FAF9F6] rounded-xl p-6 shadow-lg">
-  <h2 className="text-2xl font-semibold text-purple-500 mb-6">Latest Announcements</h2>
-  
-  <div className="flex flex-col gap-4 max-h-96 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 scrollbar-thumb-rounded-md">
-    {announcements.map((a) => (
-      <div
-        key={a.id}
-        className="flex flex-col md:flex-row items-start md:items-center gap-4 p-4 bg-white rounded-lg shadow-sm transition transform hover:scale-105 hover:shadow-lg"
-      >
-        {/* Icon */}
-        <div className="w-10 h-10 bg-gray-50 rounded-lg flex items-center justify-center flex-shrink-0 text-xl">
-          📢
-        </div>
+          {/* Latest Announcements */}
+          <div className="flex-1 bg-[#FAF9F6] rounded-xl p-6 shadow-lg">
+            <h2 className="text-2xl font-semibold text-purple-500 mb-6">Latest Announcements</h2>
+            
+            <div className="flex flex-col gap-4 max-h-96 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 scrollbar-thumb-rounded-md">
+              {announcements.map((a) => (
+                <div
+                  key={a.id}
+                  className="flex flex-col md:flex-row items-start md:items-center gap-4 p-4 bg-white rounded-lg shadow-sm transition transform hover:scale-105 hover:shadow-lg"
+                >
+                  {/* Icon */}
+                  <div className="w-10 h-10 bg-gray-50 rounded-lg flex items-center justify-center flex-shrink-0 text-xl">
+                    📢
+                  </div>
 
-        {/* Text */}
-        <div className="flex-1">
-          <h3 className="text-base font-semibold text-gray-900 mb-1">{a.title}</h3>
-          <p className="text-sm text-gray-600 mb-2">{a.subtitle}</p>
-          <div className="flex items-center gap-2 text-xs text-gray-400">
-            <CalendarIcon />
-            {a.date}
+                  {/* Text */}
+                  <div className="flex-1">
+                    <h3 className="text-base font-semibold text-gray-900 mb-1">{a.title}</h3>
+                    <p className="text-sm text-gray-600 mb-2">{a.subtitle}</p>
+                    <div className="flex items-center gap-2 text-xs text-gray-400">
+                      <CalendarIcon />
+                      {a.date}
+                    </div>
+                  </div>
+
+                  {/* Tags */}
+                  <div className="flex gap-2 flex-shrink-0 mt-2 md:mt-0">
+                    {a.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className={`px-3 py-1 rounded-full text-xs font-medium ${
+                          tag === "Admissions"
+                            ? "bg-green-100 text-green-800"
+                            : "bg-yellow-100 text-yellow-800"
+                        }`}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-
-        {/* Tags */}
-        <div className="flex gap-2 flex-shrink-0 mt-2 md:mt-0">
-          {a.tags.map((tag) => (
-            <span
-              key={tag}
-              className={`px-3 py-1 rounded-full text-xs font-medium ${
-                tag === "Admissions"
-                  ? "bg-green-100 text-green-800"
-                  : "bg-yellow-100 text-yellow-800"
-              }`}
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-      </div>
-    ))}
-  </div>
-</div>
 
 
 
@@ -358,53 +365,57 @@ export default function Home() {
 
     {/* Facilities Section */}
       <section className="bg-[#FAF9F6] py-16 px-4">
-      <div className="text-center mb-12 max-w-3xl mx-auto">
-        <h1 className="text-4xl font-semibold text-purple-700 mb-2">
-          World-Class Facilities
-        </h1>
-        <p className="text-lg text-gray-700 font-medium">
-          Modern infrastructure designed to enhance learning and development
-        </p>
-      </div>
+        <div className="text-center mb-12 max-w-3xl mx-auto">
+          <h1 className="text-4xl font-semibold text-purple-700 mb-2">
+            World-Class Facilities
+          </h1>
+          <p className="text-lg text-gray-700 font-medium">
+            Modern infrastructure designed to enhance learning and development
+          </p>
+        </div>
 
-      {/* Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {facilities.slice(0, visibleCount).map((facility) => (
-          <div
-            key={facility.id}
-            className="bg-white border rounded-lg shadow p-6 text-center transition hover:scale-105 flex flex-col items-start"
-          >
-            <div className="bg-gray-200 rounded-lg w-80 h-60 mb-4">
-              {/* Image placeholder */}
-              <img src={facility.image} alt={facility.title} className="w-full h-full object-cover rounded-lg" />
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {facilities.slice(0, visibleCount).map((facility) => (
+            <div
+              key={facility.id}
+              className="bg-white border rounded-lg shadow p-6 text-center transition hover:scale-105 flex flex-col items-start"
+            >
+              {/* Image */}
+              <div className="w-full mb-4 rounded-lg overflow-hidden bg-gray-200">
+                <img
+                  src={facility.image}
+                  alt={facility.title}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+
+              <h2 className="font-bold mb-2 text-gray-800">{facility.title}</h2>
+              <p className="text-gray-600 text-sm items-start">{facility.desc}</p>
             </div>
-            <h2 className="font-bold mb-2 text-gray-800 ">
-              {facility.title}
-            </h2>
-            <p className="text-gray-600 text-sm items-start">{facility.desc}</p>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      {/* Toggle Buttons */}
-      <div className="flex justify-center mt-10">
-        {visibleCount < facilities.length ? (
-          <button
-            onClick={handleShowMore}
-            className="bg-purple-600 text-white px-6 py-2 rounded shadow hover:bg-purple-700 transition"
-          >
-            View More Facilities
-          </button>
-        ) : (
-          <button
-            onClick={handleShowLess}
-            className="bg-gray-600 text-white px-6 py-2 rounded shadow hover:bg-gray-700 transition"
-          >
-            Show Less
-          </button>
-        )}
-      </div>
-    </section>
+        {/* Toggle Buttons */}
+        <div className="flex justify-center mt-10">
+          {visibleCount < facilities.length ? (
+            <button
+              onClick={handleShowMore}
+              className="bg-purple-600 text-white px-6 py-2 rounded shadow hover:bg-purple-700 transition"
+            >
+              View More Facilities
+            </button>
+          ) : (
+            <button
+              onClick={handleShowLess}
+              className="bg-gray-600 text-white px-6 py-2 rounded shadow hover:bg-gray-700 transition"
+            >
+              Show Less
+            </button>
+          )}
+        </div>
+      </section>
+
 
     {/* community reviews */}
       <section className="bg-white py-16 px-4">
