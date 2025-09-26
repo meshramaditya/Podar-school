@@ -48,16 +48,17 @@ export default function Home() {
 
   //facilities data
   const facilities = [
-    { id: 1, title: "Excellence in Education", desc: "Over 150 years of educational excellence across India" , image: "/asset/facility_img/facility1.svg" },
-    { id: 2, title: "Sports & Fitness", desc: "World-class sports infrastructure to keep students active", image: "/asset/facility_img/facility1.svg" },
-    { id: 3, title: "Modern Labs", desc: "Well-equipped labs for science, robotics, and AI learning", image: "/asset/facility_img/facility1.svg" },
-    { id: 4, title: "Library & Resources", desc: "Extensive digital and physical library collections", image: "/asset/facility_img/facility1.svg" },
-    { id: 5, title: "Creative Arts", desc: "Nurturing creativity with music, dance, and theater", image: "/asset/facility_img/facility1.svg" },
-    { id: 6, title: "Technology Integration", desc: "Smart classrooms with interactive learning tools", image: "/asset/facility_img/facility1.svg"},
-    { id: 7, title: "Global Exposure", desc: "Exchange programs with international schools", image: "/asset/facility_img/facility1.svg" },
-    { id: 8, title: "Safe Campus", desc: "Highly secure and student-friendly environment" , image: "/asset/facility_img/facility1.svg"},
-    { id: 9, title: "Career Guidance", desc: "Personalized mentoring and counseling sessions", image: "/asset/facility_img/facility1.svg" },
-  ];
+  { id: 1, title: "Excellence in Education", desc: "Over 150 years of educational excellence across India", image: "/asset/facility_img/facility1.svg" },
+  { id: 2, title: "Sports & Fitness", desc: "World-class sports infrastructure to keep students active", image: "/asset/facility_img/facility1.svg" },
+  { id: 3, title: "Modern Labs", desc: "Well-equipped labs for science, robotics, and AI learning", image: "/asset/facility_img/facility1.svg" },
+  { id: 4, title: "Library & Resources", desc: "Extensive digital and physical library collections", image: "/asset/facility_img/facility1.svg" },
+  { id: 5, title: "Creative Arts", desc: "Nurturing creativity with music, dance, and theater", image: "/asset/facility_img/facility1.svg" },
+  { id: 6, title: "Technology Integration", desc: "Smart classrooms with interactive learning tools", image: "/asset/facility_img/facility1.svg" },
+  { id: 7, title: "Global Exposure", desc: "Exchange programs with international schools", image: "/asset/facility_img/facility1.svg" },
+  { id: 8, title: "Safe Campus", desc: "Highly secure and student-friendly environment", image: "/asset/facility_img/facility1.svg" },
+  { id: 9, title: "Career Guidance", desc: "Personalized mentoring and counseling sessions", image: "/asset/facility_img/facility1.svg" },
+];
+
 
   const initialCount = 6;
   const [visibleCount, setVisibleCount] = useState(initialCount);
