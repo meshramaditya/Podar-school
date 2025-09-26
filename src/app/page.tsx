@@ -157,36 +157,36 @@ export default function Home() {
         />
 
        {/* Overlay Text */}
-<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
-      flex flex-col items-center justify-center text-center px-4
-      bg-gray-400/80 rounded-lg w-11/12 sm:w-4/5 lg:w-3/5 h-auto py-8">
-  
-  <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-purple-700 mb-4">
-    Shaping Future Leaders Through
-  </h1>
-  
-  <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-purple-700/90 mb-4">
-    Quality Education
-  </h2>
-  
-  <p className="text-base sm:text-lg md:text-2xl text-black font-semibold mb-8 max-w-2xl">
-    Welcome to Podar School, where tradition meets innovation to nurture
-    young minds and build character for tomorrow&apos;s challenges.
-  </p>
-  
-  <div className="flex gap-4 flex-wrap justify-center">
-    <Link href="/contact">
-      <button className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">
-        Apply For Admission
-      </button>
-    </Link>
-    <Link href="/gallery">
-      <button className="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500 transition">
-        Virtual Tour
-      </button>
-    </Link>
-  </div>
-</div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                flex flex-col items-center justify-center text-center px-4
+                bg-gray-400/80 rounded-lg w-11/12 sm:w-4/5 lg:w-3/5 h-auto py-8">
+            
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-purple-700 mb-4">
+              Shaping Future Leaders Through
+            </h1>
+            
+            <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-purple-700/90 mb-4">
+              Quality Education
+            </h2>
+            
+            <p className="text-base sm:text-lg md:text-2xl text-black font-semibold mb-8 max-w-2xl">
+              Welcome to Podar School, where tradition meets innovation to nurture
+              young minds and build character for tomorrow&apos;s challenges.
+            </p>
+            
+            <div className="flex gap-4 flex-wrap justify-center">
+              <Link href="/contact">
+                <button className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">
+                  Apply For Admission
+                </button>
+              </Link>
+              <Link href="/gallery">
+                <button className="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500 transition">
+                  Virtual Tour
+                </button>
+              </Link>
+            </div>
+          </div>
 
       </section>
 

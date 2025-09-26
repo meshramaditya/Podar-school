@@ -132,113 +132,61 @@ export default function About() {
       </section>
 
 {/* Timeline Section */}
-         <section className="max-w-4xl mx-auto py-12 px-4">
-          <h2 className="text-4xl mb-6 text-center font-semibold text-purple-700">
-            Our Journey Through Time
-          </h2>
-          <p className="text-center text-gray-600 mb-12 text-lg">
-            Key milestones in our educational journey spanning nearly a century
-          </p>
+        <section className="max-w-6xl mx-auto py-12 px-4">
+  <h2 className="text-4xl mb-6 text-center font-semibold text-purple-700">
+    Our Journey Through Time
+  </h2>
+  <p className="text-center text-gray-600 mb-12 text-lg">
+    Key milestones in our educational journey spanning nearly a century
+  </p>
 
-          <div className="relative">
-            {/* Vertical timeline line */}
-            <div className="absolute left-6 top-0 w-1 h-full bg-black"></div>
+  <div className="relative">
+    {/* Central vertical line */}
+    <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-purple-300 h-full"></div>
 
-            {/* Timeline items */}
-            <div className="space-y-8">
-              {/* Item 1 */}
-              <div className="flex items-start gap-6">
-                {/* Bullet */}
-                <div className="flex flex-col items-center relative z-10">
-                  <div className="w-4 h-4 bg-black rounded-full shadow transition-transform duration-300 hover:scale-125"></div>
-                </div>
-                <div className="bg-white rounded-lg shadow p-6 flex-1 hover:shadow-lg transition">
-                  <span className="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-xs font-bold mb-2 inline-block">
-                    1927
-                  </span>
-                  <p className="text-gray-700 leading-relaxed">
-                    Seth Anandilal Podar founded the first Podar school.
-                  </p>
-                </div>
-              </div>
+    {/* Timeline items */}
+    {[
+      { year: 1927, text: "Seth Anandilal Podar founded the first Podar school." },
+      { year: 1950, text: "Expansion to multiple cities across India." },
+      { year: 1990, text: "Introduction of modern teaching methodologies." },
+      { year: 2010, text: "Digital learning integration across all campuses." },
+      { year: 2020, text: "Virtual learning platform launch during pandemic." },
+      { year: 2024, text: "Celebrating 97 years of educational excellence." },
+    ].map((item, idx) => {
+      const isLeft = idx % 2 === 0;
 
-              {/* Item 2 */}
-              <div className="flex items-start gap-6">
-                <div className="flex flex-col items-center relative z-10">
-                  <div className="w-4 h-4 bg-black rounded-full shadow transition-transform duration-300 hover:scale-125"></div>
-                </div>
-                <div className="bg-white rounded-lg shadow p-6 flex-1 hover:shadow-lg transition">
-                  <span className="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-xs font-bold mb-2 inline-block">
-                    1950
-                  </span>
-                  <p className="text-gray-700 leading-relaxed">
-                    Expansion to multiple cities across India.
-                  </p>
-                </div>
-              </div>
-
-              {/* Item 3 */}
-              <div className="flex items-start gap-6">
-                <div className="flex flex-col items-center relative z-10">
-                  <div className="w-4 h-4 bg-black rounded-full shadow transition-transform duration-300 hover:scale-125"></div>
-                </div>
-                <div className="bg-white rounded-lg shadow p-6 flex-1 hover:shadow-lg transition">
-                  <span className="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-xs font-bold mb-2 inline-block">
-                    1990
-                  </span>
-                  <p className="text-gray-700 leading-relaxed">
-                    Introduction of modern teaching methodologies.
-                  </p>
-                </div>
-              </div>
-
-              {/* Item 4 */}
-              <div className="flex items-start gap-6">
-                <div className="flex flex-col items-center relative z-10">
-                  <div className="w-4 h-4 bg-black rounded-full shadow transition-transform duration-300 hover:scale-125"></div>
-                </div>
-                <div className="bg-white rounded-lg shadow p-6 flex-1 hover:shadow-lg transition">
-                  <span className="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-xs font-bold mb-2 inline-block">
-                    2010
-                  </span>
-                  <p className="text-gray-700 leading-relaxed">
-                    Digital learning integration across all campuses.
-                  </p>
-                </div>
-              </div>
-
-              {/* Item 5 */}
-              <div className="flex items-start gap-6">
-                <div className="flex flex-col items-center relative z-10">
-                  <div className="w-4 h-4 bg-black rounded-full shadow transition-transform duration-300 hover:scale-125"></div>
-                </div>
-                <div className="bg-white rounded-lg shadow p-6 flex-1 hover:shadow-lg transition">
-                  <span className="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-xs font-bold mb-2 inline-block">
-                    2020
-                  </span>
-                  <p className="text-gray-700 leading-relaxed">
-                    Virtual learning platform launch during pandemic.
-                  </p>
-                </div>
-              </div>
-
-              {/* Item 6 */}
-              <div className="flex items-start gap-6">
-                <div className="flex flex-col items-center relative z-10">
-                  <div className="w-4 h-4 bg-black rounded-full shadow transition-transform duration-300 hover:scale-125"></div>
-                </div>
-                <div className="bg-white rounded-lg shadow p-6 flex-1 hover:shadow-lg transition">
-                  <span className="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-xs font-bold mb-2 inline-block">
-                    2024
-                  </span>
-                  <p className="text-gray-700 leading-relaxed">
-                    Celebrating 97 years of educational excellence.
-                  </p>
-                </div>
+      return (
+        <div key={idx} className="relative w-full mb-12 flex items-center">
+          {/* Left Card */}
+          {isLeft && (
+            <div className="w-full md:w-1/2 pr-8 md:text-right">
+              <div className="bg-white rounded-lg shadow-lg p-6 transition transform hover:scale-105 hover:shadow-2xl inline-block">
+                <p className="text-gray-700">{item.text}</p>
               </div>
             </div>
+          )}
+
+          {/* Circle on timeline */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold shadow-lg z-10">
+            {item.year}
           </div>
-        </section>
+
+          {/* Right Card */}
+          {!isLeft && (
+            <div className="w-full md:w-1/2 pl-8 md:text-left">
+              <div className="bg-white rounded-lg shadow-lg p-6 transition transform hover:scale-105 hover:shadow-2xl inline-block">
+                <p className="text-gray-700">{item.text}</p>
+              </div>
+            </div>
+          )}
+        </div>
+      );
+    })}
+  </div>
+</section>
+
+
+
 
 {/*From the Principal’s Desk*/}
       <section className="bg-[#FAF9F6] py-10 px-4">
