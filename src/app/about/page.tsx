@@ -1,3 +1,4 @@
+"use client";
 import { Eye, Target, Award, Trophy, Star, Medal, ThumbsUp, Crown } from "lucide-react";
 import Image from "next/image";
 

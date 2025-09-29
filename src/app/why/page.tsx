@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { BookOpen, Users, Building2, HeartHandshake } from "lucide-react"; 
 import { Clock, Monitor, Shield } from 'lucide-react';

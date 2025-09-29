@@ -1,3 +1,4 @@
+"use client";
 export default function Contact() {
   return (
     <main className="w-full min-h-screen bg-white py-16 px-6">
