@@ -1,5 +1,6 @@
 "use client";
 
+// Force Next.js to render this page fully on the client
 export const dynamic = "force-dynamic";
 
 import React, { useState, useEffect } from "react";
@@ -53,7 +54,6 @@ export default function ApplyForm() {
     e.preventDefault();
     console.log("Form submitted:", formData);
     alert("Application submitted successfully!");
-    // send formData to backend API if needed
   };
 
   return (
