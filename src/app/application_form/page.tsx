@@ -1,12 +1,11 @@
-"use client";
-export const dynamic = "force-dynamic";
-// This ensures the page is fully client-rendered and not prerendered
-
+"use client"; // ⚠ Must be at the very top
 
 import React, { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 
-export default function ApplyForm() {
+export const dynamic = "force-dynamic"; // Disable pre-rendering
+
+export default function ApplyFormPage() {
   const searchParams = useSearchParams();
   const jobPositionFromQuery = searchParams?.get("position") || "";
 
