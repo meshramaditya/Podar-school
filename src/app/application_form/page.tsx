@@ -1,4 +1,5 @@
 "use client";
+
 export const dynamic = "force-dynamic";
 
 import React, { useState, useEffect } from "react";
@@ -6,7 +7,7 @@ import { useSearchParams } from "next/navigation";
 
 export default function ApplyForm() {
   const searchParams = useSearchParams();
-  const jobPositionFromQuery = searchParams.get("position") || "";
+  const jobPositionFromQuery = searchParams?.get("position") || "";
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -19,7 +20,6 @@ export default function ApplyForm() {
     resume: null as File | null,
   });
 
-  // Pre-fill position if passed from query
   useEffect(() => {
     if (jobPositionFromQuery) {
       setFormData(prev => ({ ...prev, position: jobPositionFromQuery }));
@@ -53,7 +53,7 @@ export default function ApplyForm() {
     e.preventDefault();
     console.log("Form submitted:", formData);
     alert("Application submitted successfully!");
-    // TODO: send formData to backend API
+    // send formData to backend API if needed
   };
 
   return (
