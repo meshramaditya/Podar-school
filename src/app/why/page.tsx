@@ -1,34 +1,51 @@
 import Image from "next/image";
-import { BookOpen, Users, Building2, HeartHandshake } from "lucide-react"; // or any icon lib you like
+import { BookOpen, Users, Building2, HeartHandshake } from "lucide-react"; 
+import { Clock, Monitor, Shield } from 'lucide-react';
 
+
+
+const features = [
+    { icon: Clock, text: "Regular parent-teacher meetings" },
+    { icon: Monitor, text: "Digital progress tracking system" },
+    { icon: Users, text: "Parent workshops and seminars" },
+    { icon: Shield, text: "Open door policy for concerns" }
+  ];
+
+  const satisfaction = [
+    { label: "Overall Satisfaction", percentage: 96, color: "bg-yellow-400" },
+    { label: "Communication Quality", percentage: 94, color: "bg-blue-900" },
+    { label: "Would Recommend", percentage: 98, color: "bg-yellow-400" }
+  ];
 export default function Why() {
   return (
     <main className="w-full h-full bg-white ">
       <div className="w-full">
         {/* why hero Section */}
-                <section className="relative w-full h-[600px] flex items-center justify-center overflow-hidden">
-                  <Image
-                    src="/asset/Image/hero-bg2.jpg"
-                    alt="Hero Background"
-                    fill
-                    className="object-cover transition-all duration-1000"
-                    priority
-                  />
-                
-                  {/* Overlay Text */}
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
-                          flex flex-col items-center justify-center text-center px-4 
-                          bg-gray-500/80 h-[100%] w-[100%] rounded-lg">
-                    <h1 className="text-7xl w-1/2 font-bold text-purple-700 mb-4">
-                     Why Choose Podar School ?
-                    </h1>
-                    
-                    <p className="text-2xl text-black font-semibold mb-8 max-w-2xl">
-                      Discover what makes us the preferred choice for thousands of families seeking quality education and holistic development.
-                    </p>
-                      
-                    </div>
-                </section>
+          <section className="relative w-full h-[600px] flex items-center justify-center overflow-hidden">
+            <Image
+              src="/asset/Image/hero-bg2.jpg"
+              alt="Hero Background"
+              fill
+              className="object-cover transition-all duration-1000"
+              priority
+            />
+
+            {/* Overlay Text */}
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                            flex flex-col items-center justify-center text-center px-4 
+                            bg-gray-500/80 h-full w-full rounded-lg">
+              
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-purple-700 mb-4 w-full sm:w-3/4 md:w-2/3 lg:w-1/2">
+                Why Choose Podar School?
+              </h1>
+              
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl text-black font-semibold mb-8 max-w-2xl">
+                Discover what makes us the preferred choice for thousands of families seeking quality education and holistic development.
+              </p>
+              
+            </div>
+          </section>
+
 
         {/* card section */}
                 <section className="bg-white py-16 px-4">
@@ -71,87 +88,85 @@ export default function Why() {
 
         {/*What Sets Us Apart*/}
                <section className="bg-[#FAF9F6] py-16 px-4">
-  <div className="text-center mb-12 max-w-3xl mx-auto">
-    <h2 className="text-4xl font-semibold text-purple-700 mb-2">
-      What Sets Us Apart
-    </h2>
-    <p className="text-lg text-gray-700 font-medium">
-      Excellence in education through balanced growth and strong values
-    </p>
-  </div>
+                <div className="text-center mb-12 max-w-3xl mx-auto">
+                  <h2 className="text-4xl font-semibold text-purple-700 mb-2">
+                    What Sets Us Apart
+                  </h2>
+                  <p className="text-lg text-gray-700 font-medium">
+                    Excellence in education through balanced growth and strong values
+                  </p>
+                </div>
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-    {/* Card 1 - Holistic Development */}
-    <div className="bg-white rounded-xl shadow-lg p-6 text-center transition transform hover:scale-105 hover:shadow-2xl group">
-      <div className="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-purple-100 text-purple-700 mb-4
-                      transition-all duration-300
-                      group-hover:bg-yellow-100
-                      group-hover:shadow-[0_0_20px_5px_rgba(255,255,0,0.6)]">
-        <BookOpen className="w-8 h-8 mx-auto" />
-      </div>
-      <h3 className="text-xl font-bold text-gray-800 mb-2">Holistic Development</h3>
-      <ul className="text-gray-600 text-sm space-y-1 list-none mx-auto">
-        <li>Perfect balance of academics</li>
-        <li>Sports, arts, & character building</li>
-        <li>Value-based education</li>
-        <li>Leadership skills</li>
-      </ul>
-    </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                  {/* Card 1 - Holistic Development */}
+                  <div className="bg-white rounded-xl shadow-lg p-6 text-center transition transform hover:scale-105 hover:shadow-2xl group">
+                    <div className="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-purple-100 text-purple-700 mb-4
+                                    transition-all duration-300
+                                    group-hover:bg-yellow-100
+                                    group-hover:shadow-[0_0_20px_5px_rgba(255,255,0,0.6)]">
+                      <BookOpen className="w-8 h-8 mx-auto" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-800 mb-2">Holistic Development</h3>
+                    <ul className="text-gray-600 text-sm space-y-1 list-none mx-auto">
+                      <li>Perfect balance of academics</li>
+                      <li>Sports, arts, & character building</li>
+                      <li>Value-based education</li>
+                      <li>Leadership skills</li>
+                    </ul>
+                  </div>
 
-    {/* Card 2 - Experienced Faculty */}
-    <div className="bg-white rounded-xl shadow-lg p-6 text-center transition transform hover:scale-105 hover:shadow-2xl group">
-      <div className="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-purple-100 text-purple-700 mb-4
-                      transition-all duration-300
-                      group-hover:bg-yellow-100
-                      group-hover:shadow-[0_0_20px_5px_rgba(255,255,0,0.6)]">
-        <Users className="w-8 h-8 mx-auto" />
-      </div>
-      <h3 className="text-xl font-bold text-gray-800 mb-2">Experienced Faculty</h3>
-      <ul className="text-gray-600 text-sm space-y-1 list-none mx-auto">
-        <li>M.Ed / Ph.D qualified teachers</li>
-        <li>Regular training programs</li>
-        <li>Student-centric approach</li>
-        <li>Personal mentorship</li>
-      </ul>
-    </div>
+                  {/* Card 2 - Experienced Faculty */}
+                  <div className="bg-white rounded-xl shadow-lg p-6 text-center transition transform hover:scale-105 hover:shadow-2xl group">
+                    <div className="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-purple-100 text-purple-700 mb-4
+                                    transition-all duration-300
+                                    group-hover:bg-yellow-100
+                                    group-hover:shadow-[0_0_20px_5px_rgba(255,255,0,0.6)]">
+                      <Users className="w-8 h-8 mx-auto" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-800 mb-2">Experienced Faculty</h3>
+                    <ul className="text-gray-600 text-sm space-y-1 list-none mx-auto">
+                      <li>M.Ed / Ph.D qualified teachers</li>
+                      <li>Regular training programs</li>
+                      <li>Student-centric approach</li>
+                      <li>Personal mentorship</li>
+                    </ul>
+                  </div>
 
-    {/* Card 3 - Modern Infrastructure */}
-    <div className="bg-white rounded-xl shadow-lg p-6 text-center transition transform hover:scale-105 hover:shadow-2xl group">
-      <div className="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-purple-100 text-purple-700 mb-4
-                      transition-all duration-300
-                      group-hover:bg-yellow-100
-                      group-hover:shadow-[0_0_20px_5px_rgba(255,255,0,0.6)]">
-        <Building2 className="w-8 h-8 mx-auto" />
-      </div>
-      <h3 className="text-xl font-bold text-gray-800 mb-2">Modern Infrastructure</h3>
-      <ul className="text-gray-600 text-sm space-y-1 list-none mx-auto">
-        <li>Smart classrooms & digital labs</li>
-        <li>Well-equipped libraries</li>
-        <li>Sports & cultural facilities</li>
-        <li>Latest educational tech</li>
-      </ul>
-    </div>
+                  {/* Card 3 - Modern Infrastructure */}
+                  <div className="bg-white rounded-xl shadow-lg p-6 text-center transition transform hover:scale-105 hover:shadow-2xl group">
+                    <div className="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-purple-100 text-purple-700 mb-4
+                                    transition-all duration-300
+                                    group-hover:bg-yellow-100
+                                    group-hover:shadow-[0_0_20px_5px_rgba(255,255,0,0.6)]">
+                      <Building2 className="w-8 h-8 mx-auto" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-800 mb-2">Modern Infrastructure</h3>
+                    <ul className="text-gray-600 text-sm space-y-1 list-none mx-auto">
+                      <li>Smart classrooms & digital labs</li>
+                      <li>Well-equipped libraries</li>
+                      <li>Sports & cultural facilities</li>
+                      <li>Latest educational tech</li>
+                    </ul>
+                  </div>
 
-    {/* Card 4 - Values & Ethics */}
-    <div className="bg-white rounded-xl shadow-lg p-6 text-center transition transform hover:scale-105 hover:shadow-2xl group">
-      <div className="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-purple-100 text-purple-700 mb-4
-                      transition-all duration-300
-                      group-hover:bg-yellow-100
-                      group-hover:shadow-[0_0_20px_5px_rgba(255,255,0,0.6)]">
-        <HeartHandshake className="w-8 h-8 mx-auto" />
-      </div>
-      <h3 className="text-xl font-bold text-gray-800 mb-2">Values & Ethics</h3>
-      <ul className="text-gray-600 text-sm space-y-1 list-none mx-auto">
-        <li>Character building</li>
-        <li>Discipline & respect</li>
-        <li>Responsibility & integrity</li>
-        <li>Strong moral foundation</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-
+                  {/* Card 4 - Values & Ethics */}
+                  <div className="bg-white rounded-xl shadow-lg p-6 text-center transition transform hover:scale-105 hover:shadow-2xl group">
+                    <div className="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-purple-100 text-purple-700 mb-4
+                                    transition-all duration-300
+                                    group-hover:bg-yellow-100
+                                    group-hover:shadow-[0_0_20px_5px_rgba(255,255,0,0.6)]">
+                      <HeartHandshake className="w-8 h-8 mx-auto" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-800 mb-2">Values & Ethics</h3>
+                    <ul className="text-gray-600 text-sm space-y-1 list-none mx-auto">
+                      <li>Character building</li>
+                      <li>Discipline & respect</li>
+                      <li>Responsibility & integrity</li>
+                      <li>Strong moral foundation</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
 
         {/*Academic Excellence*/}
                <section className="bg-white py-16 px-4">
@@ -311,16 +326,62 @@ export default function Why() {
           </div>
         </section>
 
+        {/* Parent Partnership Section */}
+                <section className="bg-white py-16 px-4">
+                      <div className="max-w-7xl mx-auto">
+                        <div className="grid md:grid-cols-2 gap-12 items-start">
+                          {/* Left Column */}
+                          <div>
+                            <h2 className="text-4xl font-semibold text-purple-700 mb-2">
+                              Strong Parent Partnership
+                            </h2>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                              We believe that education is a collaborative effort between school and home. 
+                              Our transparent communication and regular engagement ensure parents are always 
+                              informed and involved in their child's educational journey.
+                            </p>
+                            
+                            {/* Features List */}
+                            <div className="space-y-4">
+                              {features.map((feature, idx) => {
+                                const Icon = feature.icon;
+                                return (
+                                  <div key={idx} className="flex items-center gap-3">
+                                    <Icon className="w-6 h-6 text-yellow-500 flex-shrink-0" />
+                                    <span className="text-gray-600 text-lg">{feature.text}</span>
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          </div>
 
-
-
-          
-
-        
-
-
-        
-
+                          {/* Right Column - Parent Satisfaction */}
+                          <div className="bg-gray-50 rounded-2xl p-8 shadow-lg">
+                            <h3 className="text-2xl font-semibold text-purple-700 mb-8">
+                              Parent Satisfaction
+                            </h3>
+                            
+                            <div className="space-y-8">
+                              {satisfaction.map((item, idx) => (
+                                <div key={idx}>
+                                  <div className="flex justify-between items-center mb-2">
+                                    <span className="text-gray-700 font-medium">{item.label}</span>
+                                    <span className="text-2xl font-bold text-blue-900">{item.percentage}%</span>
+                                  </div>
+                                  <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                    <div 
+                                      className={`${item.color} h-full rounded-full transition-all duration-1000 ease-out`}
+                                      style={{ width: `${item.percentage}%` }}
+                                    ></div>
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+  
 
       </div>
     </main>

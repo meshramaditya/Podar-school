@@ -85,10 +85,7 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Closing */}
-        <p className="text-center text-gray-600 mt-16 max-w-2xl mx-auto">
-          Reach out to us anytime, and we’ll be happy to assist you!
-        </p>
+         
       </div>
     </main>
   );

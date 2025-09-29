@@ -198,29 +198,33 @@ export default function Careers() {
     <main className="w-full min-h-screen bg-white">
       <div className='w-full'>
       {/* Hero Section */}
-       <section className="relative w-full h-[600px] flex items-center justify-center overflow-hidden">
-                 <Image
-                   src="/asset/Image/hero-bg4.jpg"
-                   alt="Hero Background"
-                   fill
-                   className="object-cover transition-all duration-1000"
-                   priority
-                 />
-               
-                 {/* Overlay Text */}
-                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
-                         flex flex-col items-center justify-center text-center px-4 
-                         bg-gray-500/80 h-[100%] w-[100%] rounded-lg">
-                   <h1 className="text-7xl font-bold text-purple-700 mb-4">
-                     Build Your Career at
-                   </h1>
-                   <h2 className="text-5xl font-bold text-purple-700/90 mb-4">Podar School</h2>
-                   <p className="text-2xl text-black font-semibold mb-8 max-w-2xl">
-                     Join a community of passionate educators dedicated to shaping young minds and building a brighter future through quality education.
-                   </p>
-                     
-                   </div>
-               </section>
+      <section className="relative w-full h-[600px] flex items-center justify-center overflow-hidden">
+        <Image
+          src="/asset/Image/hero-bg4.jpg"
+          alt="Hero Background"
+          fill
+          className="object-cover transition-all duration-1000"
+          priority
+        />
+
+        {/* Overlay Text */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                        flex flex-col items-center justify-center text-center px-4 
+                        bg-gray-500/80 h-full w-full rounded-lg">
+          
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-purple-700 mb-4">
+            Build Your Career at
+          </h1>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-purple-700/90 mb-4">
+            Podar School
+          </h2>
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-2xl text-black font-semibold mb-8 max-w-2xl">
+            Join a community of passionate educators dedicated to shaping young minds and building a brighter future through quality education.
+          </p>
+
+        </div>
+      </section>
+
 
      {/* Why Choose Us Section */}
           <section className="bg-white py-16 px-4">
