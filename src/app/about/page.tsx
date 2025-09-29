@@ -48,7 +48,7 @@ export default function About() {
             </div>
         </section>
 
-{/* Heading */}
+{/* Our Legacy */}
         <section className="bg-white py-16 px-4"> 
           <div className="text-center mb-12 max-w-3xl mx-auto">
             <h1 className="text-5xl font-semibold text-purple-700 mb-2">
@@ -77,8 +77,53 @@ export default function About() {
       </div>
         </section>
 
+{/*From the Principal’s Desk*/}
+      <section className="bg-[#FAF9F6] py-10 px-4">
+        {/* Section Title */}
+        <div className="text-center mb-8">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-purple-700 mb-2">
+            From the Principal’s Desk
+          </h2>
+        </div>
+
+        {/* Team Cards */}
+        <div className="flex flex-col items-center gap-6">
+          {teamData.map((person, idx) => (
+            <div
+              key={idx}
+              className="bg-white flex flex-col sm:flex-row items-center sm:items-start rounded-lg shadow-lg w-full max-w-md sm:max-w-lg md:max-w-2xl p-4 sm:p-6 transition hover:shadow-2xl"
+            >
+              {/* Image */}
+              <div className="flex-shrink-0 mb-4 sm:mb-0">
+                <Image
+                  src={person.image}
+                  alt={person.name}
+                  width={160}
+                  height={200}
+                  className="object-cover h-[200px] w-[160px] sm:h-[240px] sm:w-[200px] md:h-[280px] md:w-[240px] rounded-md shadow"
+                />
+              </div>
+
+              {/* Text */}
+              <div className="flex flex-col sm:ml-4 md:ml-6 text-center sm:text-left">
+                
+                <h3 className="text-lg sm:text-xs md:text-sm font-bold text-gray-800">
+                  {person.description}
+                </h3>
+                <p className="text-sm sm:text-base text-purple-600 font-semibold mt-4 sm:mb-2">
+                  {person.name}
+                </p>
+                <p className="text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed">
+                  {person.role}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
 {/* Vision & Mission Section */}
-       <section className="bg-[#FAF9F6] py-16 px-4">
+       <section className="bg-white py-16 px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-semibold text-purple-700 mb-2">
             Our Vision & Mission
@@ -132,106 +177,56 @@ export default function About() {
       </section>
 
 {/* Timeline Section */}
-        <section className="max-w-6xl mx-auto py-12 px-4">
+   <section className="bg-[#FAF9F6] py-10 px-4">
   <h2 className="text-4xl mb-6 text-center font-semibold text-purple-700">
     Our Journey Through Time
   </h2>
   <p className="text-center text-gray-600 mb-12 text-lg">
     Key milestones in our educational journey spanning nearly a century
   </p>
-
-  <div className="relative">
-    {/* Central vertical line */}
-    <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-purple-300 h-full"></div>
-
-    {/* Timeline items */}
-    {[
-      { year: 1927, text: "Seth Anandilal Podar founded the first Podar school." },
-      { year: 1950, text: "Expansion to multiple cities across India." },
-      { year: 1990, text: "Introduction of modern teaching methodologies." },
-      { year: 2010, text: "Digital learning integration across all campuses." },
-      { year: 2020, text: "Virtual learning platform launch during pandemic." },
-      { year: 2024, text: "Celebrating 97 years of educational excellence." },
-    ].map((item, idx) => {
-      const isLeft = idx % 2 === 0;
-
-      return (
-        <div key={idx} className="relative w-full mb-12 flex items-center">
-          {/* Left Card */}
-          {isLeft && (
-            <div className="w-full md:w-1/2 pr-8 md:text-right">
-              <div className="bg-white rounded-lg shadow-lg p-6 transition transform hover:scale-105 hover:shadow-2xl inline-block">
-                <p className="text-gray-700">{item.text}</p>
+  
+  <div className="max-w-2xl mx-auto">
+    <div className="relative">
+      {/* Timeline items */}
+      {[
+        { year: 1927, text: "Seth Anandilal Podar founded the first Podar school." },
+        { year: 1950, text: "Expansion to multiple cities across India." },
+        { year: 1990, text: "Introduction of modern teaching methodologies." },
+        { year: 2010, text: "Digital learning integration across all campuses." },
+        { year: 2020, text: "Virtual learning platform launch during pandemic." },
+        { year: 2024, text: "Celebrating 97 years of educational excellence." },
+      ].map((item, idx) => {
+        const isLast = idx === 5;
+        return (
+          <div key={idx} className="relative flex items-start mb-0">
+            {/* Left side - Circle and vertical line */}
+            <div className="relative flex flex-col items-center">
+              {/* Circle */}
+              <div className="w-8 h-8 rounded-full border-4 border-black bg-white z-10"></div>
+              
+              {/* Vertical line going down */}
+              {!isLast && (
+                <div className="w-1 h-32 bg-black"></div>
+              )}
+            </div>
+            
+            {/* Horizontal line going right */}
+            <div className="w-20 h-1 bg-black mt-4"></div>
+            
+            {/* Content */}
+            <div className="ml-4 mt-0">
+              <div className="bg-white rounded-lg shadow-lg p-4 max-w-xs transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-purple-50 hover:border hover:border-purple-200 cursor-pointer">
+                <h3 className="text-lg font-bold text-black mb-2 transition-colors duration-300 hover:text-purple-700">{item.year}</h3>
+                <p className="text-gray-700 text-sm leading-relaxed">{item.text}</p>
               </div>
             </div>
-          )}
-
-          {/* Circle on timeline */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold shadow-lg z-10">
-            {item.year}
           </div>
-
-          {/* Right Card */}
-          {!isLeft && (
-            <div className="w-full md:w-1/2 pl-8 md:text-left">
-              <div className="bg-white rounded-lg shadow-lg p-6 transition transform hover:scale-105 hover:shadow-2xl inline-block">
-                <p className="text-gray-700">{item.text}</p>
-              </div>
-            </div>
-          )}
-        </div>
-      );
-    })}
+        );
+      })}
+    </div>
   </div>
 </section>
 
-
-
-
-{/*From the Principal’s Desk*/}
-      <section className="bg-[#FAF9F6] py-10 px-4">
-        {/* Section Title */}
-        <div className="text-center mb-8">
-          <h2 className="text-2xl sm:text-3xl font-semibold text-purple-700 mb-2">
-            From the Principal’s Desk
-          </h2>
-        </div>
-
-        {/* Team Cards */}
-        <div className="flex flex-col items-center gap-6">
-          {teamData.map((person, idx) => (
-            <div
-              key={idx}
-              className="bg-white flex flex-col sm:flex-row items-center sm:items-start rounded-lg shadow-lg w-full max-w-md sm:max-w-lg md:max-w-2xl p-4 sm:p-6 transition hover:shadow-2xl"
-            >
-              {/* Image */}
-              <div className="flex-shrink-0 mb-4 sm:mb-0">
-                <Image
-                  src={person.image}
-                  alt={person.name}
-                  width={160}
-                  height={200}
-                  className="object-cover h-[200px] w-[160px] sm:h-[240px] sm:w-[200px] md:h-[280px] md:w-[240px] rounded-md shadow"
-                />
-              </div>
-
-              {/* Text */}
-              <div className="flex flex-col sm:ml-4 md:ml-6 text-center sm:text-left">
-                
-                <h3 className="text-lg sm:text-xs md:text-sm font-bold text-gray-800">
-                  {person.description}
-                </h3>
-                <p className="text-sm sm:text-base text-purple-600 font-semibold mt-4 sm:mb-2">
-                  {person.name}
-                </p>
-                <p className="text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed">
-                  {person.role}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
 
 {/* Achievements Section */}
        <section className="bg-white py-16 px-4">
