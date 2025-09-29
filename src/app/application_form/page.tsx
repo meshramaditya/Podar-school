@@ -1,9 +1,10 @@
-"use client"; // ⚠ Must be at the very top
+"use client"; // must be the very first line
 
 import React, { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 
-export const dynamic = "force-dynamic"; // Disable pre-rendering
+// This tells Next.js to always render this page on the server at request time
+export const dynamic = "force-dynamic";
 
 export default function ApplyFormPage() {
   const searchParams = useSearchParams();
@@ -32,7 +33,6 @@ export default function ApplyFormPage() {
     "Math Teacher",
     "Librarian",
   ];
-
   const experiences = ["0-1 years", "2-5 years", "5-10 years", "10+ years"];
 
   const handleChange = (
@@ -72,7 +72,6 @@ export default function ApplyFormPage() {
             <input
               type="text"
               name="fullName"
-              placeholder="John Doe"
               value={formData.fullName}
               onChange={handleChange}
               required
@@ -86,7 +85,6 @@ export default function ApplyFormPage() {
             <input
               type="email"
               name="email"
-              placeholder="john@example.com"
               value={formData.email}
               onChange={handleChange}
               required
@@ -96,11 +94,10 @@ export default function ApplyFormPage() {
 
           {/* Phone */}
           <div>
-            <label className="block text-gray-700 font-medium mb-2">Phone Number *</label>
+            <label className="block text-gray-700 font-medium mb-2">Phone *</label>
             <input
               type="tel"
               name="phone"
-              placeholder="+91 9876543210"
               value={formData.phone}
               onChange={handleChange}
               required
@@ -141,7 +138,7 @@ export default function ApplyFormPage() {
               required
               className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-purple-500"
             >
-              <option value="">Select experience level</option>
+              <option value="">Select experience</option>
               {experiences.map((exp, idx) => (
                 <option key={idx} value={exp}>{exp}</option>
               ))}
@@ -150,29 +147,15 @@ export default function ApplyFormPage() {
 
           {/* Cover Letter */}
           <div>
-            <label className="block text-gray-700 font-medium mb-2">Cover Letter / Message *</label>
+            <label className="block text-gray-700 font-medium mb-2">Cover Letter *</label>
             <textarea
               name="coverLetter"
-              placeholder="Briefly tell us why you are a great fit for this position..."
               value={formData.coverLetter}
               onChange={handleChange}
               required
               rows={5}
               className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-purple-500"
             />
-          </div>
-
-          {/* Video Upload */}
-          <div>
-            <label className="block text-gray-700 font-medium mb-2">Introduction Video (Optional)</label>
-            <input
-              type="file"
-              name="video"
-              accept=".mp4,.mov,.avi"
-              onChange={handleFileChange}
-              className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-purple-500"
-            />
-            <p className="text-gray-500 text-sm mt-1">MP4, MOV, AVI | Max 50MB</p>
           </div>
 
           {/* Resume Upload */}
@@ -186,7 +169,6 @@ export default function ApplyFormPage() {
               required
               className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-purple-500"
             />
-            <p className="text-gray-500 text-sm mt-1">PDF, DOC, DOCX | Max 5MB</p>
           </div>
 
           {/* Submit */}
@@ -195,7 +177,7 @@ export default function ApplyFormPage() {
               type="submit"
               className="bg-purple-600 text-white font-semibold px-10 py-3 rounded-lg hover:bg-purple-700 transition"
             >
-              Submit Application
+              Submit
             </button>
           </div>
         </form>
