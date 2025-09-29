@@ -222,8 +222,8 @@ export default function Careers() {
                    </div>
                </section>
 
-      {/* Why Choose Us Section */}
-      <section className="bg-white py-16 px-4">
+     {/* Why Choose Us Section */}
+          <section className="bg-white py-16 px-4">
             <div className="text-center mb-12 max-w-3xl mx-auto">
               <h2 className="text-4xl font-semibold text-purple-700 mb-4">
                 Why Choose Podar School?
@@ -239,11 +239,19 @@ export default function Careers() {
                   key={idx}
                   className="bg-white rounded-xl shadow-lg p-6 text-center transition transform hover:scale-105 hover:shadow-2xl group"
                 >
-                  <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-purple-100 group-hover:bg-purple-600 transition relative">
-                    {card.icon}
+                  {/* Icon Container */}
+                  <div className="w-16 h-16 flex items-center justify-center rounded-full bg-purple-100 text-purple-700 mb-4
+                                  transition-all duration-300
+                                  group-hover:bg-yellow-100
+                                  group-hover:shadow-[0_0_20px_5px_rgba(255,255,0,0.6)] mx-auto">
+                    <span className="mx-auto">{card.icon}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">{card.title}</h3>
-                  <p className="text-gray-600 text-sm">{card.description}</p>
+
+                  {/* Title */}
+                  <h3 className="text-xl font-bold text-gray-800 mb-2 text-center">{card.title}</h3>
+
+                  {/* Description */}
+                  <p className="text-gray-600 text-sm text-center">{card.description}</p>
                 </div>
               ))}
             </div>
@@ -330,34 +338,40 @@ export default function Careers() {
             </div>
           </section>
 
+        {/* Benefits & Perks Section */}
+      <section className="bg-white py-16 px-4">
+        <div className="text-center mb-12 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-semibold text-purple-700 mb-4">
+            Benefits & Perks
+          </h2>
+          <p className="text-lg text-gray-700 font-medium">
+            We offer comprehensive benefits to support your professional and personal growth
+          </p>
+        </div>
 
-      
-        {/*Benefits & Perks Section*/}
-              <section className="bg-white py-16 px-4">
-              <div className="text-center mb-12 max-w-3xl mx-auto">
-                <h2 className="text-4xl font-semibold text-purple-700 mb-4">
-                  Benefits & Perks
-                </h2>
-                <p className="text-lg text-gray-700 font-medium">
-                  We offer comprehensive benefits to support your professional and personal growth
-                </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {perks.map((perk, idx) => (
+            <div
+              key={idx}
+              className="bg-white rounded-xl shadow-lg p-6 text-center transition transform hover:scale-105 hover:shadow-2xl group"
+            >
+              {/* Icon Container with Yellow Glow */}
+              <div className="w-16 h-16 flex items-center justify-center rounded-full bg-purple-100 text-purple-700 mb-4
+                              transition-all duration-300
+                              group-hover:bg-yellow-100
+                              group-hover:shadow-[0_0_20px_5px_rgba(255,255,0,0.6)] mx-auto">
+                <span className="mx-auto">{perk.icon}</span>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                {perks.map((perk, idx) => (
-                  <div
-                    key={idx}
-                    className="bg-white rounded-xl shadow-lg p-6 text-center transition transform hover:scale-105 hover:shadow-2xl group"
-                  >
-                    <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-purple-100 group-hover:bg-purple-600 transition relative">
-                      {perk.icon}
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-800 mb-2">{perk.title}</h3>
-                    <p className="text-gray-600 text-sm">{perk.description}</p>
-                  </div>
-                ))}
-              </div>
-            </section>
+              {/* Title */}
+              <h3 className="text-xl font-bold text-gray-800 mb-2 text-center">{perk.title}</h3>
+
+              {/* Description */}
+              <p className="text-gray-600 text-sm text-center">{perk.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
 
       </div>

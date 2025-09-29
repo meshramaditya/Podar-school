@@ -71,81 +71,87 @@ export default function Why() {
 
         {/*What Sets Us Apart*/}
                <section className="bg-[#FAF9F6] py-16 px-4">
-            <div className="text-center mb-12 max-w-3xl mx-auto">
-              <h2 className="text-4xl font-semibold text-purple-700 mb-2">
-                What Sets Us Apart
-              </h2>
-              <p className="text-lg text-gray-700 font-medium">
-                Excellence in education through balanced growth and strong values
-              </p>
-            </div>
+  <div className="text-center mb-12 max-w-3xl mx-auto">
+    <h2 className="text-4xl font-semibold text-purple-700 mb-2">
+      What Sets Us Apart
+    </h2>
+    <p className="text-lg text-gray-700 font-medium">
+      Excellence in education through balanced growth and strong values
+    </p>
+  </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {/* Card 1 - Holistic Development */}
-              <div className="bg-white rounded-xl shadow-lg p-6 text-center transition transform hover:scale-105 hover:shadow-2xl group">
-                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-purple-100 group-hover:bg-purple-600 transition relative">
-                  <BookOpen className="w-8 h-8 text-purple-600 group-hover:text-white transition group-hover:drop-shadow-[0_0_10px_rgba(147,51,234,0.8)]" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">
-                  Holistic Development
-                </h3>
-                <ul className="text-gray-600 text-sm space-y-1">
-                  <li>Perfect balance of academics</li>
-                  <li>Sports, arts, & character building</li>
-                  <li>Value-based education</li>
-                  <li>Leadership skills</li>
-                </ul>
-              </div>
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+    {/* Card 1 - Holistic Development */}
+    <div className="bg-white rounded-xl shadow-lg p-6 text-center transition transform hover:scale-105 hover:shadow-2xl group">
+      <div className="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-purple-100 text-purple-700 mb-4
+                      transition-all duration-300
+                      group-hover:bg-yellow-100
+                      group-hover:shadow-[0_0_20px_5px_rgba(255,255,0,0.6)]">
+        <BookOpen className="w-8 h-8 mx-auto" />
+      </div>
+      <h3 className="text-xl font-bold text-gray-800 mb-2">Holistic Development</h3>
+      <ul className="text-gray-600 text-sm space-y-1 list-none mx-auto">
+        <li>Perfect balance of academics</li>
+        <li>Sports, arts, & character building</li>
+        <li>Value-based education</li>
+        <li>Leadership skills</li>
+      </ul>
+    </div>
 
-              {/* Card 2 - Experienced Faculty */}
-              <div className="bg-white rounded-xl shadow-lg p-6 text-center transition transform hover:scale-105 hover:shadow-2xl group">
-                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-purple-100 group-hover:bg-purple-600 transition relative">
-                  <Users className="w-8 h-8 text-purple-600 group-hover:text-white transition group-hover:drop-shadow-[0_0_10px_rgba(147,51,234,0.8)]" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">
-                  Experienced Faculty
-                </h3>
-                <ul className="text-gray-600 text-sm space-y-1">
-                  <li>M.Ed / Ph.D qualified teachers</li>
-                  <li>Regular training programs</li>
-                  <li>Student-centric approach</li>
-                  <li>Personal mentorship</li>
-                </ul>
-              </div>
+    {/* Card 2 - Experienced Faculty */}
+    <div className="bg-white rounded-xl shadow-lg p-6 text-center transition transform hover:scale-105 hover:shadow-2xl group">
+      <div className="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-purple-100 text-purple-700 mb-4
+                      transition-all duration-300
+                      group-hover:bg-yellow-100
+                      group-hover:shadow-[0_0_20px_5px_rgba(255,255,0,0.6)]">
+        <Users className="w-8 h-8 mx-auto" />
+      </div>
+      <h3 className="text-xl font-bold text-gray-800 mb-2">Experienced Faculty</h3>
+      <ul className="text-gray-600 text-sm space-y-1 list-none mx-auto">
+        <li>M.Ed / Ph.D qualified teachers</li>
+        <li>Regular training programs</li>
+        <li>Student-centric approach</li>
+        <li>Personal mentorship</li>
+      </ul>
+    </div>
 
-              {/* Card 3 - Modern Infrastructure */}
-              <div className="bg-white rounded-xl shadow-lg p-6 text-center transition transform hover:scale-105 hover:shadow-2xl group">
-                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-purple-100 group-hover:bg-purple-600 transition relative">
-                  <Building2 className="w-8 h-8 text-purple-600 group-hover:text-white transition group-hover:drop-shadow-[0_0_10px_rgba(147,51,234,0.8)]" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">
-                  Modern Infrastructure
-                </h3>
-                <ul className="text-gray-600 text-sm space-y-1">
-                  <li>Smart classrooms & digital labs</li>
-                  <li>Well-equipped libraries</li>
-                  <li>Sports & cultural facilities</li>
-                  <li>Latest educational tech</li>
-                </ul>
-              </div>
+    {/* Card 3 - Modern Infrastructure */}
+    <div className="bg-white rounded-xl shadow-lg p-6 text-center transition transform hover:scale-105 hover:shadow-2xl group">
+      <div className="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-purple-100 text-purple-700 mb-4
+                      transition-all duration-300
+                      group-hover:bg-yellow-100
+                      group-hover:shadow-[0_0_20px_5px_rgba(255,255,0,0.6)]">
+        <Building2 className="w-8 h-8 mx-auto" />
+      </div>
+      <h3 className="text-xl font-bold text-gray-800 mb-2">Modern Infrastructure</h3>
+      <ul className="text-gray-600 text-sm space-y-1 list-none mx-auto">
+        <li>Smart classrooms & digital labs</li>
+        <li>Well-equipped libraries</li>
+        <li>Sports & cultural facilities</li>
+        <li>Latest educational tech</li>
+      </ul>
+    </div>
 
-              {/* Card 4 - Values & Ethics */}
-              <div className="bg-white rounded-xl shadow-lg p-6 text-center transition transform hover:scale-105 hover:shadow-2xl group">
-                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-purple-100 group-hover:bg-purple-600 transition relative">
-                  <HeartHandshake className="w-8 h-8 text-purple-600 group-hover:text-white transition group-hover:drop-shadow-[0_0_10px_rgba(147,51,234,0.8)]" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">
-                  Values & Ethics
-                </h3>
-                <ul className="text-gray-600 text-sm space-y-1">
-                  <li>Character building</li>
-                  <li>Discipline & respect</li>
-                  <li>Responsibility & integrity</li>
-                  <li>Strong moral foundation</li>
-                </ul>
-              </div>
-            </div>
-          </section>
+    {/* Card 4 - Values & Ethics */}
+    <div className="bg-white rounded-xl shadow-lg p-6 text-center transition transform hover:scale-105 hover:shadow-2xl group">
+      <div className="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-purple-100 text-purple-700 mb-4
+                      transition-all duration-300
+                      group-hover:bg-yellow-100
+                      group-hover:shadow-[0_0_20px_5px_rgba(255,255,0,0.6)]">
+        <HeartHandshake className="w-8 h-8 mx-auto" />
+      </div>
+      <h3 className="text-xl font-bold text-gray-800 mb-2">Values & Ethics</h3>
+      <ul className="text-gray-600 text-sm space-y-1 list-none mx-auto">
+        <li>Character building</li>
+        <li>Discipline & respect</li>
+        <li>Responsibility & integrity</li>
+        <li>Strong moral foundation</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
 
         {/*Academic Excellence*/}
                <section className="bg-white py-16 px-4">
