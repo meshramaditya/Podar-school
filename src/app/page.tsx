@@ -144,6 +144,15 @@ export default function Home() {
 
   const [showAll, setShowAll] = useState(false);
 
+  const pdfs = [
+      { title: "Previous month report", thumbnail: "/asset/thambnail/thamb1.jpg", link: "/asset/PDF/demo1.pdf" },
+      { title: "July 2025", thumbnail: "/asset/thambnail/thamb1.jpg", link: "/asset/PDF/demo1.pdf" },
+      { title: "Jun 2025", thumbnail: "/asset/thambnail/thamb1.jpg", link: "/asset/PDF/demo1.pdf" },
+      { title: "May 2025", thumbnail: "/asset/thambnail/thamb1.jpg", link: "/asset/PDF/demo1.pdf" },
+      { title: "April 2025", thumbnail: "/asset/thambnail/thamb1.jpg", link: "/asset/PDF/demo1.pdf" },
+      { title: "March Report", thumbnail: "/asset/thambnail/thamb1.jpg", link: "/asset/PDF/demo1.pdf" },
+    ];
+
   return (
     <main className="w-full">
       {/* Hero Section */}
@@ -473,7 +482,73 @@ export default function Home() {
       </div>
     </section>
 
-     
+    {/* PDF Marquee Section */}
+        <section className="bg-[#FAF9F6] py-16 overflow-hidden">
+      <h2 className="text-4xl font-bold text-purple-700 text-center mb-10">
+        Monthly Reports & Brochures
+      </h2>
+
+      <div className="flex flex-col lg:flex-row gap-6 items-center max-w-7xl mx-auto px-4">
+        {/* First Card (Fixed) */}
+        <a
+          href={pdfs[0].link}
+          target="_blank"
+          className="w-full lg:min-w-[300px] lg:w-auto bg-white rounded-2xl shadow-md p-4 text-center 
+                    font-semibold text-black transition-transform duration-300 
+                    hover:scale-105 hover:shadow-2xl flex flex-col items-center"
+        >
+          <img
+            src={pdfs[0].thumbnail }
+            alt={pdfs[0].title}
+            className="w-full h-80 rounded-md mb-3 object-cover"
+          />
+          📄 {pdfs[0].title}
+        </a>
+
+        {/* Marquee Cards */}
+        <div className="relative flex-1 overflow-hidden w-full">
+          <div className="flex gap-6 animate-marquee">
+            {pdfs.slice(1).map((pdf, idx) => (
+              <a
+                key={idx}
+                href={pdf.link}
+                target="_blank"
+                className="min-w-[300px] bg-white rounded-2xl shadow-md p-4 text-center 
+                          font-semibold text-black transition-transform duration-300 
+                          hover:scale-105 hover:shadow-2xl mb-6 mt-6 flex flex-col items-center"
+              >
+                <img
+                  src={pdf.thumbnail }
+                  alt={pdf.title}
+                  className="w-full h-64 rounded-md mb-3 object-cover"
+                />
+                📄 {pdf.title}
+              </a>
+            ))}
+
+            {/* Duplicate for smooth looping */}
+            {pdfs.slice(1).map((pdf, idx) => (
+              <a
+                key={`dup-${idx}`}
+                href={pdf.link}
+                target="_blank"
+                className="min-w-[300px] bg-white rounded-2xl shadow-md p-4 text-center 
+                          font-semibold text-purple-700 transition-transform duration-300 
+                          hover:scale-105 hover:shadow-2xl flex flex-col items-center"
+              >
+                <img
+                  src={pdf.thumbnail}
+                  alt={pdf.title}
+                  className="w-full h-64 rounded-md mb-3 object-cover"
+                />
+                📄 {pdf.title}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     </main>
   );
