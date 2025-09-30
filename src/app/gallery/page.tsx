@@ -51,6 +51,9 @@ export default function Gallery() {
     { id: '2AgmoQy0zTE', title: 'Art Exhibition' },
     { id: 'YAOIbHBEvi0', title: 'Annual Sports' },
     { id: '45PR60pF_6w', title: 'Inter-School Sports' },
+    { id: 'X1PguQUsqGQ', title: 'Annual Science Fair' },
+    { id: 'X1PguQUsqGQ', title: 'Science Exhibition' },
+    { id: 'X1PguQUsqGQ', title: 'Annual Science Fair' },
   ];
 
   const [showAllImages, setShowAllImages] = useState(false);
