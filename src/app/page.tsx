@@ -393,7 +393,7 @@ export default function Home() {
           {facilities.slice(0, visibleCount).map((facility) => (
             <div
               key={facility.id}
-              className="bg-white border rounded-lg shadow p-6 text-center transition hover:scale-105 flex flex-col items-start"
+              className="bg-white border rounded-lg shadow p-6 text-center transition hover:scale-105 flex flex-col items-center"
             >
               {/* Image */}
               <div className="w-full mb-4 rounded-lg overflow-hidden bg-gray-200">
@@ -404,8 +404,8 @@ export default function Home() {
                 />
               </div>
 
-              <h1 className="font-bold  mb-2 text-gray-800">{facility.title}</h1>
-              <p className="text-gray-600 items-start">{facility.desc}</p>
+              <h1 className="font-bold  mb-2 text-center text-gray-800">{facility.title}</h1>
+              <p className="text-gray-600 text-center">{facility.desc}</p>
             </div>
           ))}
         </div>
