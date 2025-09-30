@@ -4,7 +4,7 @@ export default function Contact() {
     <main className="w-full min-h-screen bg-white py-16 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
-        <h1 className="text-5xl font-extrabold mb-12 text-center text-blue-600">
+        <h1 className="text-5xl font-extrabold mb-12 text-center text-purple-600">
           Contact Us
         </h1>
 
