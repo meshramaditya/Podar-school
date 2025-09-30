@@ -42,14 +42,15 @@ export default function Gallery() {
   };
 
   const videos = [
-    { id: 'dQw4w9WgXcQ', title: 'School Annual Day' },
-    { id: '9bZkp7q19f0', title: 'Science Exhibition' },
-    { id: '3JZ_D3ELwOQ', title: 'Sports Meet' },
-    { id: 'L_jWHffIx5E', title: 'Cultural Fest' },
+    { id: 'dp2OYt_2O9E', title: 'School Annual Day' },
+    { id: 'wSXGpoDGDbE', title: 'Science Exhibition' },
+    { id: 'YJg1rs0R2sE', title: 'Sports Meet' },
+    { id: '1s0KwuU5e4Y', title: 'Cultural Fest' },
     { id: 'kJQP7kiw5Fk', title: 'Music Concert' },
-    { id: 'e-ORhEE9VVg', title: 'Debate Competition' },
-    { id: '60ItHLz5WEA', title: 'Art Exhibition' },
-    { id: 'YQHsXMglC9A', title: 'Annual Sports' },
+    { id: 'TGpG56pg3UU', title: 'Debate Competition' },
+    { id: '2AgmoQy0zTE', title: 'Art Exhibition' },
+    { id: 'YAOIbHBEvi0', title: 'Annual Sports' },
+    { id: '45PR60pF_6w', title: 'Inter-School Sports' },
   ];
 
   const [showAllImages, setShowAllImages] = useState(false);
