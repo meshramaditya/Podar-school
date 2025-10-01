@@ -7,7 +7,11 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+      Alice: ['Alice', 'serif'], // <-- your 3rd font name
+    },
+    },
   },
   plugins: [],
 }

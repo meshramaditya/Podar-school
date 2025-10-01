@@ -9,6 +9,8 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@fontsource/roboto": "^5.2.8",
+    "condensed": "^0.0.7",
     "lucide-react": "^0.544.0",
     "next": "15.5.3",
     "react": "19.1.0",
