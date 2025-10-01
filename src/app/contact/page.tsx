@@ -1,15 +1,45 @@
 "use client";
+
+import Image from "next/image";
+
 export default function Contact() {
   return (
-    <main className="w-full min-h-screen bg-white py-16 px-6">
-      <div className="max-w-6xl mx-auto">
-        {/* Heading */}
-        <h1 className="text-5xl font-extrabold mb-12 text-center text-purple-600">
-          Contact Us
-        </h1>
+    <main className="w-full h-full bg-white">
+      <div className="w-full">
+        {/* why hero Section */}
+                  <section className="relative w-full mb-10 h-[600px] flex items-center justify-center overflow-hidden">
+                    <Image
+                      src="/asset/Image/hero-bg.jpg"
+                      alt="Hero Background"
+                      fill
+                      className="object-cover transition-all duration-1000"
+                      priority
+                    />
+        
+                    {/* Overlay Text */}
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                                    flex flex-col items-center justify-center text-center px-4 
+                                    bg-gray-500/80 h-full w-full rounded-lg">
+                      
+                      <h1 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-purple-700 mb-4 w-full sm:w-3/4 md:w-2/3 lg:w-1/  text-center">
+                        Contact Us
+                      </h1>
+                      <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-purple-700 mb-4 w-full sm:w-3/4 md:w-2/3 lg:w-1/2">
+                        Future Podar Learn School
+                      </h1>
+                      
+                      <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl text-black font-semibold mb-8 max-w-2xl">
+                        We're here to answer your questions and help you take the next step in your child's educational journey.
+                      </p>
+                      
+                    </div>
+                  </section>
 
-        {/* Contact Container */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        {/* contact form and info container */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+
+          <div className="grid grid-cols-1 md:grid-cols-2  gap-12">
           {/* Contact Form */}
           <div className="p-8 rounded-xl h-fit shadow-md hover:shadow-lg transition-shadow bg-gradient-to-tr from-white to-blue-50">
             <h2 className="text-2xl  font-semibold text-gray-900 mb-6">Send a Message</h2>
@@ -41,7 +71,11 @@ export default function Contact() {
                   className="w-full border border-gray-300 text-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   <option value="">Select Purpose</option>
-                  <option value="inquiry">Inquiry</option>
+                  <option value="inquiry">Admission Inquiry</option>
+                  <option value="general">General Information</option>
+                  <option value="academic">Academic Programs</option>
+                  <option value="campus">Campus Visit</option>
+                  <option value="fee">Fee Structure</option>
                   <option value="apply">Apply</option>
                   <option value="appointment">Book Appointment</option>
                   <option value="other">Other</option>
@@ -68,7 +102,7 @@ export default function Contact() {
           </div>
 
           {/* Contact Info */}
-          <div className="p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow bg-gradient-to-tr from-white to-green-50">
+          <div className="p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow bg-gradient-to-tr from-white mb-10 to-green-50">
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">Get in Touch</h2>
             <div>
                {/* Address Card */}
@@ -149,6 +183,9 @@ export default function Contact() {
             
           </div>
         </div>
+        </section>
+        
+        
 
          
       </div>
