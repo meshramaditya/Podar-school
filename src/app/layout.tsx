@@ -3,10 +3,10 @@ import "./globals.css"
 import Navbar from "@/components/navbar"
 
 export const metadata = {
-  title: "Podar School Sakoli",
-  description: "Official Podar School website",
+  title: "Future Podar Learn School Sakoli",
+  description: "Official Future Podar Learn School website",
   icons: {
-    icon: '/asset/logs/podar_icon.png', // ✅ Add your favicon here
+    icon: "/asset/logs/logo.jpg", // ✅ Add favicon here
   },
 }
 

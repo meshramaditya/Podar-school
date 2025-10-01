@@ -22,14 +22,15 @@ export default function Navbar() {
     <nav className="bg-[#f8f8f8] text-white px-6 py-3 shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 ">
           <Image
-            src="/asset/logs/podar-logo.svg"
+            src="/asset/logs/logo.jpg"
             alt="School Logo"
             width={120}
             height={40}
+            className="h-12 w-12"
           />
-          <span className="font-bold text-[#843d8d] text-xl">Podar School</span>
+          <span className="font-bold text-[#843d8d] text-xl">Future Podar Learn School</span>
         </div>
 
         {/* Desktop Links */}

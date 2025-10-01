@@ -5,10 +5,10 @@ import Image from "next/image";
 const teamData = [
     {
       name: "Dr. Meera Kulkarni",
-      role: "Principal, Podar School,(M.Ed, Ph.D. Education, 25+ years experience)",
+      role: "Principal, Future Podar Learn School,(M.Ed, Ph.D. Education, 25+ years experience)",
       image: "/asset/parent_img/img4.jpg",
-      description: "At Podar School, we believe that every child is unique and has the potential to excel. Our role is to nurture this potential through personalized attention, innovative teaching methods, and a caring environment. We are committed to developing not just academic achievers, but confident, compassionate, and responsible citizens of tomorrow.",
-    }, 
+      description: "At Future Podar Learn School, we believe that every child is unique and has the potential to excel. Our role is to nurture this potential through personalized attention, innovative teaching methods, and a caring environment. We are committed to developing not just academic achievers, but confident, compassionate, and responsible citizens of tomorrow.",
+    },
   ]
 
 const achievements = [
@@ -41,7 +41,7 @@ export default function About() {
             <h1 className="text-7xl font-bold text-purple-700 mb-4">
               About Us
             </h1>
-            <h2 className="text-5xl font-bold text-purple-700/90 mb-4">Podar Education Network</h2>
+            <h2 className="text-5xl font-bold text-purple-700 mb-4">Future Podar Learn School</h2>
             <p className="text-2xl text-black font-semibold mb-8 max-w-2xl">
               Nearly a century of educational excellence, shaping millions of lives across India through quality education and strong values.
             </p>

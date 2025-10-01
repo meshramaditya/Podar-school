@@ -5,16 +5,16 @@ import Image from "next/image";
 import Link from "next/link";
 import WhyCard from "@/components/WhyCard"
 import { GraduationCap, Award, BookOpen, Users ,School, Building2, HeartHandshake} from "lucide-react" // or any icon lib you like
-import GlanceCard from "@/components/GlanceCard"
 export default function Home() {
   // Hero images for slideshow
   const images = [
-    "/asset/Image/hero-bg.svg",
-    "/asset/Image/hero-bg1.jpg",
+    "/asset/Image/hero-bg.jpg",
+    "/asset/Image/hero-bg1.svg",
     "/asset/Image/hero-bg2.jpg",
     "/asset/Image/hero-bg3.jpg",
     "/asset/Image/hero-bg4.jpg",
     "/asset/Image/hero-bg5.jpg",
+    "/asset/Image/hero-bg6.jpg",
   ]; // Add all your images here
 
   // Announcements data
@@ -72,7 +72,7 @@ export default function Home() {
       id: 1,
       rating: 5,
       comment:
-        "Podar School has given my child an amazing environment to learn and grow. The teachers are very supportive and encouraging!",
+        "Future Podar Learn School has given my child an amazing environment to learn and grow. The teachers are very supportive and encouraging!",
       name: "Mrs. Anjali Sharma",
       image: "/asset/parent_img/img1.jpg",
     },
@@ -104,7 +104,7 @@ export default function Home() {
       id: 5,
       rating: 5,
       comment:
-        "The teachers are caring and pay attention to each child individually. I highly recommend Podar School.",
+        "The teachers are caring and pay attention to each child individually. I highly recommend Future Podar Learn School.",
       name: "Mrs. Neha Desai",
       image: "/asset/parent_img/img4.jpg",
     },
@@ -179,7 +179,7 @@ export default function Home() {
             </h2>
             
             <p className="text-base sm:text-lg md:text-2xl text-black font-semibold mb-8 max-w-2xl">
-              Welcome to Podar School, where tradition meets innovation to nurture
+              Welcome to Future Podar Learn School, where tradition meets innovation to nurture
               young minds and build character for tomorrow&apos;s challenges.
             </p>
             
@@ -187,7 +187,7 @@ export default function Home() {
               <Link href="/contact">
                 <button className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">
                   Apply For Admission
-                </button>
+                 </button>
               </Link>
               <Link href="/gallery">
                 <button className="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500 transition">
@@ -203,7 +203,7 @@ export default function Home() {
       <section className="bg-white py-16 px-4">
       <div className="text-center mb-12 max-w-3xl mx-auto">
         <h1 className="text-4xl font-semibold text-purple-700 mb-2">
-          Why Choose Podar School
+          Why Choose Future Podar Learn School
         </h1>
         <p className="text-lg text-gray-700 font-medium">
           Discover what makes us one of India&apos;s most trusted educational institutions
@@ -238,7 +238,7 @@ export default function Home() {
       <section className="bg-[#FAF9F6] py-16">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-semibold text-purple-700 mb-2">
-            Podar School at a Glance
+            Future Podar Learn School at a Glance
           </h2>
 
           <p className="text-lg text-gray-700 font-medium">
@@ -438,7 +438,7 @@ export default function Home() {
           What Our Community Says
         </h2>
         <p className="text-lg text-gray-700 font-medium">
-          Hear from parents about their experience with Podar School
+          Hear from parents about their experience with Future Podar Learn School
         </p>
       </div>
 

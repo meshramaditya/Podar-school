@@ -37,9 +37,9 @@ export default function Footer() {
         {/* About / Logo */}
         <div>
           <div className="flex items-center gap-3 mb-4">
-           <img className="w-8 h-8" src="/asset/logs/podar_icon.png" alt="Podar School Logo" />
+           <img className="w-12 h-12" src="/asset/logs/logo.jpg" alt="Future Podar Learn School Logo" />
           <div className="flex flex-col">
-            <h3 className="text-xl font-bold ">Podar School Sakoli</h3>
+            <h3 className="text-xl font-bold ">Future Podar Learn School Sakoli</h3>
             <p className="text-sm text-gray-200">Excellence in Education</p> </div>
           </div>
           <p className="text-sm text-gray-200">
@@ -87,28 +87,28 @@ export default function Footer() {
               <a
                 href="https://facebook.com"
                 target="_blank"
-                className="text-blue-600 text-3xl hover:text-blue-800 transition"
+                className="text-purple-400 text-3xl hover:text-blue-800 transition"
               >
                 <FaFacebook />
               </a>
               <a
                 href="https://instagram.com"
                 target="_blank"
-                className="text-pink-500 text-3xl hover:text-pink-700 transition"
+                className="text-purple-400 text-3xl hover:text-blue-800 transition"
               >
                 <FaInstagram />
               </a>
               <a
                 href="https://twitter.com"
                 target="_blank"
-                className="text-sky-500 text-3xl hover:text-sky-700 transition"
+                className="text-purple-400 text-3xl hover:text-blue-800 transition"
               >
                 <FaTwitter />
               </a>
               <a
                 href="https://linkedin.com"
                 target="_blank"
-                className="text-blue-700 text-3xl hover:text-blue-900 transition"
+                className="text-purple-400 text-3xl hover:text-blue-800 transition"
               >
                 <FaLinkedin />
               </a>
@@ -130,7 +130,7 @@ export default function Footer() {
       </div>
       <hr className="my-8 border-gray-400" />
       <div className="items-center justify-between text-sm text-gray-300 flex flex-col md:flex-row gap-4">
-        <p>© 2025 Podar School Sakoli. All rights reserved.</p>
+        <p>© 2025 Future Podar Learn School Sakoli. All rights reserved.</p>
         <div className="flex gap-4">
           <a href="/privacy-policy" className="hover:underline">Privacy Policy</a>
           <a href="/terms-of-service" className="hover:underline">Terms of Service</a>

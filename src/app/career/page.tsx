@@ -243,8 +243,8 @@ export default function Careers() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-purple-700 mb-4">
             Build Your Career at
           </h1>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-purple-700/90 mb-4">
-            Podar School
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-purple-700 mb-4">
+            Future Podar Learn School
           </h2>
           <p className="text-lg sm:text-xl md:text-2xl lg:text-2xl text-black font-semibold mb-8 max-w-2xl">
             Join a community of passionate educators dedicated to shaping young minds and building a brighter future through quality education.
@@ -258,7 +258,7 @@ export default function Careers() {
           <section className="bg-white py-16 px-4">
             <div className="text-center mb-12 max-w-3xl mx-auto">
               <h2 className="text-4xl font-semibold text-purple-700 mb-4">
-                Why Choose Podar School?
+                Why Choose Future Podar Learn School?
               </h2>
               <p className="text-lg text-gray-700 font-medium">
                 Discover the advantages of being part of one of India's most prestigious educational institutions

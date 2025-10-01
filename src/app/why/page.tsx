@@ -37,7 +37,7 @@ export default function Why() {
                             bg-gray-500/80 h-full w-full rounded-lg">
               
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-purple-700 mb-4 w-full sm:w-3/4 md:w-2/3 lg:w-1/2">
-                Why Choose Podar School?
+                Why Choose Future Podar Learn School?
               </h1>
               
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl text-black font-semibold mb-8 max-w-2xl">
@@ -266,7 +266,7 @@ export default function Why() {
               Success Stories
             </h2>
             <p className="text-lg text-gray-700 font-medium">
-              Hear from our parent and alumni community about their Podar experience
+              Hear from our parent and alumni community about their Future Podar Learn School experience
             </p>
           </div>
 
