@@ -179,7 +179,7 @@ export default function Home() {
             </h2>
             
             <p className="text-base sm:text-lg md:text-2xl text-black font-semibold mb-8 max-w-2xl">
-              Welcome to Future Podar Learn School, where tradition meets innovation to nurture
+              Welcome to Future Podar Learn School Sakoli, where tradition meets innovation to nurture
               young minds and build character for tomorrow&apos;s challenges.
             </p>
             
@@ -203,10 +203,10 @@ export default function Home() {
       <section className="bg-white py-16 px-4">
       <div className="text-center mb-12 max-w-3xl mx-auto">
         <h1 className="text-4xl font-semibold text-purple-700 mb-2">
-          Why Choose Future Podar Learn School
+          Why Choose Future Podar Learn School, Sakoli
         </h1>
         <p className="text-lg text-gray-700 font-medium">
-          Discover what makes us one of India&apos;s most trusted educational institutions
+          Discover what makes us one of the India&apos;s most trusted educational institution
         </p>
       </div>
 
@@ -214,7 +214,7 @@ export default function Home() {
         <WhyCard
           icon={<GraduationCap className="w-12 h-12 text-purple-600 transition-all duration-300 hover:bg-yellow-100 hover:shadow-[0_0_15px_3px_rgba(255,255,0,0.5)]" />}
           title="Excellence in Education"
-          description="Over 5+ years of educational excellence across India"
+          description="Since 1927 educational excellence across India"
         />
         <WhyCard
           icon={<Award className="w-12 h-12 text-yellow-500 transition-all duration-300 hover:bg-yellow-100 hover:shadow-[0_0_15px_3px_rgba(255,255,0,0.5)]" />}
@@ -224,7 +224,7 @@ export default function Home() {
         <WhyCard
           icon={<BookOpen className="w-12 h-12 text-green-600 transition-all duration-300 hover:bg-yellow-100 hover:shadow-[0_0_15px_3px_rgba(255,255,0,0.5)]" />}
           title="Holistic Learning"
-          description="Balancing academics, sports, and cultural activities"
+          description="Functioning for More than Grades"
         />
         <WhyCard
           icon={<Users className="w-12 h-12 text-blue-600 transition-all duration-300 hover:bg-yellow-100 hover:shadow-[0_0_15px_3px_rgba(255,255,0,0.5)]" />}
@@ -238,7 +238,7 @@ export default function Home() {
       <section className="bg-[#FAF9F6] py-16">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-semibold text-purple-700 mb-2">
-            Future Podar Learn School at a Glance
+            Future Podar Learn School, Sakoli at a Glance
           </h2>
 
           <p className="text-lg text-gray-700 font-medium">
@@ -367,8 +367,11 @@ export default function Home() {
             <div className="bg-gray-50 rounded-lg p-5 border border-gray-200">
               <h3 className="font-semibold text-gray-900 mb-1">Contact Information</h3>
               <div className="text-gray-600 mb-3 leading-relaxed">
-                📍 ICT Education Street, Mumbai<br />
-                📞 +91 1234567890
+                📍 Future Podar Learn School, Jambhali/s.Sakoli<br />
+                📞 +91 7776948067 (Admin office)<br />
+                📞 +91 7020302501 (FDE)<br />
+                📧 admin.Futurepls@podar.org <br />
+                📧 Fde.futurepls@podar.org
               </div>
               <a href="#" className="text-white bg-gray-400 py-2 px-4 font-medium hover:bg-gray-500 rounded-lg">View Details</a>
             </div>
@@ -438,7 +441,7 @@ export default function Home() {
           What Our Community Says
         </h2>
         <p className="text-lg text-gray-700 font-medium">
-          Hear from parents about their experience with Future Podar Learn School
+          Hear from parents about their experience with Future Podar Learn School, Sakoli
         </p>
       </div>
 
@@ -484,7 +487,10 @@ export default function Home() {
 
     {/* PDF Marquee Section */}
         <section className="bg-[#FAF9F6] py-16 overflow-hidden">
-      <h2 className="text-4xl font-bold text-purple-700 text-center mb-10">
+      <h2 className="text-4xl font-bold text-purple-700 text-center ">
+        PODAR FPLS SPOTLIGHTS
+      </h2>
+      <h2 className="text-xl  text-gray-500 text-center mb-10">
         Monthly Reports & Brochures
       </h2>
 

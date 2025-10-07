@@ -30,7 +30,7 @@ export default function Navbar() {
             height={40}
             className="h-12 w-12"
           />
-          <span className="font-bold text-[#843d8d] text-xl">Future Podar Learn School</span>
+          <span className="font-bold text-[#843d8d] text-xl">Future Podar Learn School, Sakoli</span>
         </div>
 
         {/* Desktop Links */}

@@ -14,7 +14,7 @@ export default function Footer() {
         </h2>
         <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
           Take the first step towards your child’s bright future. 
-          Our admissions team is here to guide you.
+          Our admission team is here to guide you.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Link href="/get-information">
@@ -66,15 +66,24 @@ export default function Footer() {
           <div className="space-y-2 text-sm text-gray-200 gap-2 flex flex-col">
             <div className="flex items-center gap-2">
               <MapPin className="w-6 h-6" />
-              <p>Sakoli, Bhandara, Maharashtra 400001</p>
+              <p>Future podar learn school, Jambhali/S.Sakoli, Bhandara, Maharashtra </p>
             </div>
             <div className="flex items-center gap-2">
               <Phone className="w-6 h-6" />
-              <p>+91 22 1234 5678</p>
+              <p>+91 7776948067 (Admin office)</p>
+            </div>
+            <div className="flex items-center gap-2">
+              <Phone className="w-6 h-6" />
+              <p>+91 7020302501 (FDE)</p>
+            </div>
+              
+            <div className="flex items-center gap-2">
+              <Mail className="w-6 h-6" />
+              <p>admin.Futurepls@podar.org</p>
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-6 h-6" />
-              <p>info@podarschool.edu.in</p>
+              <p>fde.Futurepls@podar.org</p>
             </div>
           </div>
           

@@ -37,7 +37,7 @@ export default function Why() {
                             bg-gray-500/80 h-full w-full rounded-lg">
               
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-purple-700 mb-4 w-full sm:w-3/4 md:w-2/3 lg:w-1/2">
-                Why Choose Future Podar Learn School?
+                Why Choose Future Podar Learn School, Sakoli?
               </h1>
               
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl text-black font-semibold mb-8 max-w-2xl">

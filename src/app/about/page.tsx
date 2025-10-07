@@ -43,7 +43,7 @@ export default function About() {
             </h1>
             <h2 className="text-5xl font-bold text-purple-700 mb-4">Future Podar Learn School</h2>
             <p className="text-2xl text-black font-semibold mb-8 max-w-2xl">
-              Nearly a century of educational excellence, shaping millions of lives across India through quality education and strong values.
+              Nearly a century of educational excellence, shaping millions of lives across India through the quality education and strong values.
             </p>
               
             </div>
@@ -56,7 +56,7 @@ export default function About() {
               Our Legacy
             </h1>
             <p className="text-lg text-gray-700 font-medium">
-              Discover what makes us one of India&apos;s most trusted educational institutions
+              Discover what makes us one of India&apos;s most trusted educational institution
             </p>
       </div>
       <div className=" flex flex-col md:flex-row items-center justify-center gap-8 max-w-6xl mx-auto">
@@ -77,6 +77,51 @@ export default function About() {
         </div>
       </div>
         </section>
+
+{/*From the Director’s Desk*/}
+      <section className="bg-[#FAF9F6] py-10 px-4">
+        {/* Section Title */}
+        <div className="text-center mb-8">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-purple-700 mb-2">
+            From the Director’s Desk
+          </h2>
+        </div>
+
+        {/* Team Cards */}
+        <div className="flex flex-col items-center gap-6">
+          {teamData.map((person, idx) => (
+            <div
+              key={idx}
+              className="bg-white flex flex-col sm:flex-row items-center sm:items-start rounded-lg shadow-lg w-full max-w-md sm:max-w-lg md:max-w-2xl p-4 sm:p-6 transition hover:shadow-2xl"
+            >
+              {/* Image */}
+              <div className="flex-shrink-0 mb-4 sm:mb-0">
+                <Image
+                  src={person.image}
+                  alt={person.name}
+                  width={160}
+                  height={200}
+                  className="object-cover h-[200px] w-[160px] sm:h-[240px] sm:w-[200px] md:h-[280px] md:w-[240px] rounded-md shadow"
+                />
+              </div>
+
+              {/* Text */}
+              <div className="flex flex-col sm:ml-4 md:ml-6 text-center sm:text-left">
+                
+                <h3 className="text-lg sm:text-xs md:text-sm font-bold text-gray-800">
+                  {person.description}
+                </h3>
+                <p className="text-sm sm:text-base text-purple-600 font-semibold mt-4 sm:mb-2">
+                  {person.name}
+                </p>
+                <p className="text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed">
+                  {person.role}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
 {/*From the Principal’s Desk*/}
       <section className="bg-[#FAF9F6] py-10 px-4">
